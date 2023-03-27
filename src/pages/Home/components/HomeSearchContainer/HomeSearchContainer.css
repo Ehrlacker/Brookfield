@@ -1,0 +1,21 @@
+
+
+
+.SearchContainer {
+    background-image: url("assets/river-5662293.jpg");
+    background-size: cover;
+    /* object-fit: cover; */
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+  }
+
+  .SearchContainerTitle{
+      color: white;
+      font-size: 4.5rem;
+      font-weight: bold
+  }

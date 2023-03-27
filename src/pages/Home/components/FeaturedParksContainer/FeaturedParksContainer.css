@@ -1,0 +1,17 @@
+.ParkList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1330px;
+}
+
+@media (max-width: 1370px) {
+  .ParkList {
+    /* overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    width: 100%; */
+  }
+}

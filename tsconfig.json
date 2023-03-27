@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+
+    "baseUrl": "src",
+    "paths": {
+      "client/*": ["./client/*"]
+    },
+
     "target": "es5",
     "lib": [
       "dom",

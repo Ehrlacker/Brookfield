@@ -1,0 +1,32 @@
+
+
+.Park{
+    width: 300px;
+    margin: 1rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.Parkimage{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 1.25rem;
+    transition: transform .5s ease;
+}
+
+.Parkimage:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.ParkName{
+font-weight: bold;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.ParkLocation{
+    font-weight: bold;
+}

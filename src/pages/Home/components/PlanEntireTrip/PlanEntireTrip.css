@@ -1,0 +1,35 @@
+
+.PlanEntireTrip{
+    background-image: url("assets/window-3178666_1920.jpg");
+    background-size: cover;
+    /* object-fit: cover; */
+    /* width: 100%; */
+    width: 1300px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.25rem;
+}
+.PlanEntireTripH1{
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 28rem;
+}
+.PlanEntireTripP{
+    color: white;
+    background-color: #C84B31;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1370px){
+    .PlanEntireTrip{
+        /* max-width: 1200px;
+        height: 1000px; */
+    }
+    
+}

@@ -1,0 +1,10 @@
+
+
+
+.Navbar{
+    
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
