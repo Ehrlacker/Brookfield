@@ -1,0 +1,12 @@
+
+
+.RoundedButton{
+    all: unset;
+    background-color: #C84B31;
+    color: white;
+    border-radius: 1.25rem;
+    padding: .4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    
+}

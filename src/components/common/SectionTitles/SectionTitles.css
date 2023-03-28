@@ -2,8 +2,9 @@
 
 .SectionTitles{
     color: black;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     /* text-align: left; */
-    margin: 3.25rem;
+    margin: 3.25rem 1rem 3.5rem 1rem;
+    text-align: left;
 }
