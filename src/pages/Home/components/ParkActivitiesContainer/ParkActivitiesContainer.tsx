@@ -2,13 +2,17 @@ import RoundedButton from "components/common/RoundedButton/RoundedButton"
 import SectionTitles from "components/common/SectionTitles/SectionTitles"
 import "./ParkActivitiesContainer.css"
 import ActivityImages from 'pages/Home/components/ActivityImages/ActivityImages'
+import Activity from 'pages/Home/components/Activity/Activity'
 
 
-type activityType =[ 
-  url: string,
-  name: string,
 
-]
+// const ActivityImage: {name: string; url: string} []
+
+interface activityType {
+name: string,
+url: string,
+}
+
 const ParkActivitiesContainer = () => {
   return (
     <div className="ParkActivitiesContainer">
@@ -21,13 +25,17 @@ const ParkActivitiesContainer = () => {
 
           <button className="ParkActivitiesButton">Start Here</button>
         </div>
-        <ul>
-        {/* {ActivityImages.map((activity): activityType=>{
+        <ul className="ActivitiesContainer">
+        {ActivityImages.map((activity)=>{
           return (
-            <img src={activity.url} alt="a picture of an outoor activity" />
-            <h1>{activity.name}</h1>
+            <Activity
+            name={activity.name}
+            url={activity.url} />
+
+            // <img src={activity.url} alt="a picture of an outoor activity" />
+            // <h1>{activity.name}</h1>
           )
-        })} */}
+        })}
         </ul>
       </div>
     </div>

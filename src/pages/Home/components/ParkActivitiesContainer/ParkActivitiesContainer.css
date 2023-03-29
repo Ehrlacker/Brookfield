@@ -37,3 +37,12 @@
 
   background-color: #a7422e;
 }
+
+.ActivitiesContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 100%; */
+  max-width: 1330px;
+  height: auto;
+}

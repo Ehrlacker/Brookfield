@@ -9,45 +9,48 @@ import Boating from 'assets/water-3161063_1920.jpg'
 import Biking from 'assets/to-go-biking-2520007_1920.jpg'
 
 
-const ActivityImages = [
+const ActivityImages: {name: string; url: string} [] = [
     {
         name: "Hiking",
-        url: {Hiking}
+        url: Hiking
     },
 
     {
         name: "Camping",
-        url: {Camping}
+        url: Camping
     },
 
     {
         name: "Climbing",
-        url: {Climbing}
+        url: Climbing
     },
 
     {
         name: "Kayaking",
-        url: {Kayaking}
+        url: Kayaking
     },
 
     {
         name: "Fishing",
-        url: {Fishing}
+        url: Fishing
     },
 
     {
         name: "Astronomy",
-        url: {Astronomy}
+        url: Astronomy
     },
 
     {
         name: "Boating",
-        url: {Boating}
+        url: Boating
     },
     {
         name: "Biking",
-        url: {Biking}
+        url: Biking
     }
 ]
+
+
+
 
 export default ActivityImages
