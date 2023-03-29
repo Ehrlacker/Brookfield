@@ -1,6 +1,8 @@
 .ParkActivitiesContainer {
   background-color: #ecdbba;
   /* max-width: 1330px; */
+  /* width: 100%; */
+  max-width: 1330px;
   width: 100%;
   height: 100%;
 }
