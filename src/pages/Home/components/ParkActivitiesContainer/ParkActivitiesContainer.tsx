@@ -22,12 +22,12 @@ const ParkActivitiesContainer = () => {
           <button className="ParkActivitiesButton">Start Here</button>
         </div>
         <ul>
-        {ActivityImages.map((activity): activityType=>{
+        {/* {ActivityImages.map((activity): activityType=>{
           return (
             <img src={activity.url} alt="a picture of an outoor activity" />
             <h1>{activity.name}</h1>
           )
-        })}
+        })} */}
         </ul>
       </div>
     </div>
