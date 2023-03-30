@@ -19,3 +19,23 @@
       font-size: 4.5rem;
       font-weight: bold
   }
+
+  @media(max-width:768px){
+  
+    .SearchContainer{
+        height: 600px;
+    }
+
+
+  }
+
+
+  @media(max-width:480px){
+    .SearchContainerTitle{
+        font-size: 2.5rem;
+    }
+    .SearchContainer{
+        height: 500px;
+    }
+
+}

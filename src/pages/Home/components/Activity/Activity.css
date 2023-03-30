@@ -29,3 +29,39 @@
      bottom:15%;
      text-shadow: 2px 4px 4px black;
  }
+
+
+ @media(max-width:768px){
+
+    .Activity{
+        width: 250px;
+        height: 250px;
+    }
+
+    .ActivityImage{
+        height: 225px;
+    }
+
+    .ActivityName{
+        font-size: 1.25rem;
+        bottom:22%;
+    }
+
+ }
+
+
+ @media(max-width:480px){
+    .Activity{
+        width: 150px;
+        height: 150px;
+    }
+
+    .ActivityImage{
+        height: 150px;
+    }
+
+    .ActivityName{
+        font-size: 1.25rem;
+        bottom:22%;
+    }
+ }
