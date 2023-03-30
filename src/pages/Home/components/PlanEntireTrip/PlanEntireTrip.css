@@ -46,3 +46,23 @@
     margin-top: 0;
   }
 }
+
+
+@media(max-width:768px){
+  .PlanEntireTripH1 {
+    font-size: 2.75rem;
+  }
+  .PlanEntireTripP {
+    font-size:1.75rem;
+      }
+}
+
+@media(max-width:480px){
+  .PlanEntireTripH1 {
+    font-size: 2.25rem;
+  }
+
+  .PlanEntireTripP {
+font-size:1.15rem;
+  }
+}

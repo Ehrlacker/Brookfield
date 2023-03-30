@@ -28,6 +28,11 @@
     scroll-behavior: smooth;
    background-size: contain;
    -webkit-overflow-scrolling: touch;
+
+  }
+
+  .ParkList::-webkit-scrollbar{
+    display: none;
   }
 
 }

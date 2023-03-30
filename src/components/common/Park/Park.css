@@ -1,33 +1,54 @@
-
-
-.Park{
-   min-width: 300px;
-   max-width: 300px;
-    margin: 1rem;
-    text-align: left;
-    overflow: hidden;
+.Park {
+  min-width: 300px;
+  max-width: 300px;
+  margin: 1rem;
+  text-align: left;
+  overflow: hidden;
 }
 
-.Parkimage{
-    object-fit: cover;
-    height: 300px;
-    width: 100%;
-    border-radius: 1.25rem;
-    transition: transform .5s ease;
+.Parkimage {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 1.25rem;
+  transition: transform 0.5s ease;
 }
 
-.Parkimage:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+.Parkimage:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
-.ParkName{
-font-weight: bold;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
+.ParkName {
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.ParkLocation{
-    font-weight: bold;
+.ParkLocation {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .Park {
+    min-width: 250px;
+    max-width: 250px;
+    margin: 0.75rem;
+  }
+  .Parkimage {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Park {
+    min-width: 150px;
+    max-width: 150px;
+    margin: 0.75rem;
+  }
+
+  .Parkimage {
+    height: 150px;
+  }
 }

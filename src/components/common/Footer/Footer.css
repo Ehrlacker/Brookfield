@@ -1,14 +1,30 @@
-
-
-.Footer{
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
-    background-color: #346751;
-    height: 100px;
-    color: white;
-    padding: 2rem;
+.FooterContainer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.Footer {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #346751;
+  width: 100%;
+  max-width: 1330px;
+  color: white;
+  padding: 2rem;
+}
 
+@media (max-width: 768px) {
+  .Footer {
+    font-size: 1.75rem;
+    padding: 2.5rem;
+  }
+}
 
+@media (max-width: 480px) {
+  .Footer {
+    font-size: 1.25rem;
+  }
+}
