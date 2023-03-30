@@ -6,6 +6,7 @@ import Nav from "components/common/Nav/Nav"
 import Footer from 'components/common/Footer/Footer'
 
 import Home from "pages/Home/Home"
+import ParkSearch from 'pages/ParkSearch/ParkSearch'
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Parks" element={<ParkSearch />} />
       </Routes>
       <Footer />
     </div>

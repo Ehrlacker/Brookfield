@@ -1,0 +1,19 @@
+
+
+.Rectanglebutton{
+    all: unset;
+    background-color: #C84B31;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    font-size: 1.25rem;
+    padding: .25rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.Rectanglebutton:hover{
+    cursor: pointer;
+    background-color: #a7422e;
+   
+}

@@ -10,6 +10,9 @@ const Navbar = () => {
          <NavItem 
     page="/" title="Home"/>
 
+<NavItem 
+    page="/Parks" title="Parks"/>
+
     {/* <NavItem
     page="/CardFinder" title="Card Finder" />
 

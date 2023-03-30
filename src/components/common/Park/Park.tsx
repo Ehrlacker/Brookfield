@@ -1,18 +1,30 @@
+import "./Park.css"
+// import { PlusCircleIcon } from "@heroicons/react/24/solid"
 
-import './Park.css'
-
-type park={
-    image:string;
-    name:string;
-    location:string
+type park = {
+  image: string
+  name: string
+  location: string
+  clickHandler: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
 
-const Park = ({image, name, location}:park) => {
+const Park = ({ image, name, location, clickHandler }: park) => {
   return (
     <div className="Park">
-        <img className="Parkimage" src={image} alt="a picture of a park"></img>
+      <img
+        onClick={clickHandler}
+        className="Parkimage"
+        src={image}
+        alt="a picture of a park"
+      />
+      {/* <button className="ParkButton">
+        <PlusCircleIcon />
+      </button> */}
+
+      <div className="ParkNameButtonContainer">
         <h3 className="ParkName">{name}</h3>
-        <p className="ParkLocation">State: {location}</p>
+      </div>
+      <p className="ParkLocation">State: {location}</p>
     </div>
   )
 }

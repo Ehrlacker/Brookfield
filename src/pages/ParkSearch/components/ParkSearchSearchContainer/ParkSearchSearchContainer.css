@@ -1,8 +1,7 @@
 
 
-
-.SearchContainer {
-    background-image: url("assets/river-5662293.jpg");
+.ParkSearchSearchContainer{
+    background-image: url("assets/river-1899328_1920.jpg");
     background-size: cover;
     /* object-fit: cover; */
     width: 100%;
@@ -14,7 +13,7 @@
    
   }
 
-  .SearchContainerTitle{
+  .ParkSearchSearchContainerTitle{
       color: white;
       font-size: 4.5rem;
       font-weight: bold;
@@ -23,7 +22,7 @@
 
   @media(max-width:768px){
   
-    .SearchContainer{
+    .ParkSearchSearchContainer{
         height: 600px;
     }
 
@@ -32,10 +31,10 @@
 
 
   @media(max-width:480px){
-    .SearchContainerTitle{
+    .ParkSearchSearchContainerTitle{
         font-size: 2.5rem;
     }
-    .SearchContainer{
+    .ParkSearchSearchContainer{
         height: 500px;
     }
 

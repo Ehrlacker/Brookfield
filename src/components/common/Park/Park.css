@@ -15,8 +15,16 @@
 }
 
 .Parkimage:hover {
-  transform: scale(1.05);
   cursor: pointer;
+}
+
+.Parkimage:hover {
+  transform: scale(1.05);
+  /* cursor: pointer; */
+}
+
+.ParkNameButtonContainer {
+  display: flex;
 }
 
 .ParkName {
@@ -24,10 +32,24 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-top: 0.25rem;
 }
 
+/* .ParkButton {
+  all: unset;
+
+  color: #c84b31;
+ 
+  width: 2rem;
+  position: relative;
+  bottom: 10%;
+  left: 80%;
+  border-radius: 0.5rem;
+} */
+
 .ParkLocation {
-  font-weight: bold;
+  color: rgb(69, 68, 68);
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
