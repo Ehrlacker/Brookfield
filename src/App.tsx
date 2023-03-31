@@ -8,15 +8,21 @@ import Footer from 'components/common/Footer/Footer'
 import Home from "pages/Home/Home"
 import ParkSearch from 'pages/ParkSearch/ParkSearch'
 
+import  NumberParkSearchProviderProvider  from "contexts/ParkSearchProvider"
+
 
 const App = () => {
   return (
     <div className="App">
       <Nav />
+      <NumberParkSearchProviderProvider>
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/Parks" element={<ParkSearch />} />
+        
       </Routes>
+      </NumberParkSearchProviderProvider>
       <Footer />
     </div>
   )

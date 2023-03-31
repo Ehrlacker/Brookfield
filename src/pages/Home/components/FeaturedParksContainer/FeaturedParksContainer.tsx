@@ -22,7 +22,6 @@ const FeaturedParksContainer = () => {
 {/* <div className="ParkListContainer"> */}
       <ul className="ParkList">
         {parks.map((park) => {
-          console.log(park.images[0])
           return (
             <Park
               key={park.id}
