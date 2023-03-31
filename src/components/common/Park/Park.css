@@ -50,13 +50,21 @@
 .ParkLocation {
   color: rgb(69, 68, 68);
   margin-top: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ParkButtonDiv{
+  display:flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
   .Park {
     min-width: 250px;
     max-width: 250px;
-    margin: 0.75rem;
+
   }
   .Parkimage {
     height: 250px;
@@ -67,7 +75,7 @@
   .Park {
     min-width: 150px;
     max-width: 150px;
-    margin: 0.75rem;
+ 
   }
 
   .Parkimage {

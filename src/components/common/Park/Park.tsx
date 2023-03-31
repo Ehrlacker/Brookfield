@@ -1,5 +1,5 @@
 import "./Park.css"
-// import { PlusCircleIcon } from "@heroicons/react/24/solid"
+import RectangleButton from "components/common/Rectanglebutton/Rectanglebutton"
 
 type park = {
   image: string
@@ -17,14 +17,23 @@ const Park = ({ image, name, location, clickHandler }: park) => {
         src={image}
         alt="a picture of a park"
       />
-      {/* <button className="ParkButton">
-        <PlusCircleIcon />
-      </button> */}
 
       <div className="ParkNameButtonContainer">
         <h3 className="ParkName">{name}</h3>
       </div>
       <p className="ParkLocation">State: {location}</p>
+
+      <div className="ParkButtonDiv">
+        <RectangleButton
+          name="Details"
+          clickHandler={() => console.log("clicked")}
+        />
+
+{/* <RectangleButton
+          name="Plan"
+          clickHandler={() => console.log("clicked")}
+        /> */}
+      </div>
     </div>
   )
 }
