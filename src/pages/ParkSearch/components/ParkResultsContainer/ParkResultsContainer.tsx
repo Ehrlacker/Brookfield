@@ -4,6 +4,7 @@ import Park from "components/common/Park/Park"
 import "./ParkResultsContainer.css"
 import { useContext } from "react"
 import { ParkSearchContext } from "contexts/ParkSearchProvider"
+import River from "assets/river-1899328_1920.jpg"
 
 const ParkResultsContainer = () => {
   const { parks, setParks } = useContext(ParkSearchContext)
@@ -16,7 +17,7 @@ const ParkResultsContainer = () => {
           return (
             <Park
               key={park.id}
-              image={park.images[0].url}
+              image={park.images[0].url === null ? River : park.images[0].url}
               name={park.fullName}
               location={park.states}
               clickHandler={() => {

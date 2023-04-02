@@ -3,25 +3,22 @@ import "./App.css"
 import { Routes, Route } from "react-router-dom"
 
 import Nav from "components/common/Nav/Nav"
-import Footer from 'components/common/Footer/Footer'
+import Footer from "components/common/Footer/Footer"
 
 import Home from "pages/Home/Home"
-import ParkSearch from 'pages/ParkSearch/ParkSearch'
+import ParkSearch from "pages/ParkSearch/ParkSearch"
 
-import  NumberParkSearchProviderProvider  from "contexts/ParkSearchProvider"
-
+import NumberParkSearchProviderProvider from "contexts/ParkSearchProvider"
 
 const App = () => {
   return (
     <div className="App">
       <Nav />
       <NumberParkSearchProviderProvider>
-      <Routes>
-        
-        <Route path="/" element={<Home />} />
-        <Route path="/Parks" element={<ParkSearch />} />
-        
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Parks" element={<ParkSearch />} />
+        </Routes>
       </NumberParkSearchProviderProvider>
       <Footer />
     </div>

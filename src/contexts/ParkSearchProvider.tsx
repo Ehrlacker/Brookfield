@@ -1,32 +1,26 @@
-
 import { useState, createContext } from "react"
 import { Datum } from "types/types"
 
-
-
-type ParkSearchContextProviderprops ={
+type ParkSearchContextProviderprops = {
   children: React.ReactNode
 }
 
-type parkState ={
-  parks: Datum[],
-  setParks: (parks: Datum[]) => void;
+type parkState = {
+  parks: Datum[]
+  setParks: (parks: Datum[]) => void
 }
-
 
 export const ParkSearchContext = createContext<parkState>({
   parks: [],
-  setParks : () => {},
+  setParks: () => {},
 })
 
-const ParkSearchProvider = ({children}:ParkSearchContextProviderprops) => {
-
+const ParkSearchProvider = ({ children }: ParkSearchContextProviderprops) => {
   const [parks, setParks] = useState<Datum[]>([])
   return (
-    <ParkSearchContext.Provider value={{parks, setParks}}>
+    <ParkSearchContext.Provider value={{ parks, setParks }}>
       {children}
-    </ParkSearchContext.Provider> 
-  
+    </ParkSearchContext.Provider>
   )
 }
 
