@@ -1,5 +1,11 @@
 .ParkActivitiesContainer {
-  background-color: #ecdbba;
+  background: url('assets/vintage-concrete.webp') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* background-color: #ecdbba; */
   /* max-width: 1330px; */
   /* width: 100%; */
   max-width: 1330px;
