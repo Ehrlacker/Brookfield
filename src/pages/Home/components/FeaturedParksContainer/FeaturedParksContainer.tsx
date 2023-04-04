@@ -25,6 +25,7 @@ const FeaturedParksContainer = () => {
           return (
             <Park
               key={park.id}
+              id={park.id}
               image={park.images[0].url}
               name={park.fullName}
               location={park.states}

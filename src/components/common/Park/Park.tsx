@@ -1,3 +1,6 @@
+
+import {useNavigate} from 'react-router-dom'
+
 import "./Park.css"
 import RectangleButton from "components/common/Rectanglebutton/Rectanglebutton"
 
@@ -5,10 +8,12 @@ type park = {
   image: string
   name: string
   location: string
+  id: string
   clickHandler: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
 
-const Park = ({ image, name, location, clickHandler }: park) => {
+const Park = ({ image, name, location, id, clickHandler }: park) => {
+  const navigate = useNavigate()
   return (
     <div className="Park">
       <img
@@ -26,13 +31,8 @@ const Park = ({ image, name, location, clickHandler }: park) => {
       <div className="ParkButtonDiv">
         <RectangleButton
           name="Details"
-          clickHandler={() => console.log("clicked")}
+          clickHandler={() =>  navigate(`/park/${id}`)}
         />
-
-{/* <RectangleButton
-          name="Plan"
-          clickHandler={() => console.log("clicked")}
-        /> */}
       </div>
     </div>
   )

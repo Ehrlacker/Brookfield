@@ -17,7 +17,7 @@ const App = () => {
       <NumberParkSearchProviderProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Parks" element={<ParkSearch />} />
+          <Route path="/parks" element={<ParkSearch />} />
         </Routes>
       </NumberParkSearchProviderProvider>
       <Footer />

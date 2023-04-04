@@ -7,7 +7,8 @@ import { ParkSearchContext } from "contexts/ParkSearchProvider"
 import River from "assets/river-1899328_1920.jpg"
 
 const ParkResultsContainer = () => {
-  const { parks, setParks } = useContext(ParkSearchContext)
+  const { parks } = useContext(ParkSearchContext)
+
   return (
     <div className="ParkResultsContainer">
       <SectionTitles name="Search Results" />
@@ -17,6 +18,7 @@ const ParkResultsContainer = () => {
           return (
             <Park
               key={park.id}
+              id={park.id}
               image={park.images[0].url === null ? River : park.images[0].url}
               name={park.fullName}
               location={park.states}

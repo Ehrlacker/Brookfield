@@ -7,8 +7,8 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <div className = "Navbar">
-         <NavItem 
-    page="/" title="Home"/>
+         {/* <NavItem 
+    page="/" title="Home"/> */}
 
 <NavItem 
     page="/Parks" title="Parks"/>

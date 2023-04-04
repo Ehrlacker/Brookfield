@@ -1,12 +1,8 @@
 import { ChangeEvent, useState, useEffect, useContext } from "react"
 import { ParkSearchContext } from "contexts/ParkSearchProvider"
-import {
-  useLocation,
-  useNavigate,
-  useSearchParams,
-  useParams,
-} from "react-router-dom"
-import "./Searchbar.css"
+import { useLocation, useNavigate, useSearchParams, useParams } from "react-router-dom"
+import {Datum} from 'types/types'
+import "./HomeSearchBar.css"
 // import useParks from "hooks/UseParks"
 
 type buttonSearch = {
@@ -14,57 +10,41 @@ type buttonSearch = {
   onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-const Searchbar = () => {
+const HomeSearchBar = () => {
   const { parks, setParks } = useContext(ParkSearchContext)
   const [value, SetValue] = useState("")
   const [params] = useSearchParams()
-  const { name } = useParams()
 
   console.log(params.get("state"))
-
-  const [parkSearchQuery, setParkSearchQuery] = useState("")
-
-  // let location = useLocation()
+//   const [parkSearchQuery, setParkSearchQuery] = useState("")
   const navigate = useNavigate()
 
-  // const parks = useParks(parkSearchQuery)
-  useEffect(() => {
-    if(parkSearchQuery.length === 0){
-      return
-    }
     const getParks = async () => {
-      const url = `https://developer.nps.gov/api/v1/parks?api_key=FcBVNSTUhHmVDsktfx7MkAgtGyTTnEqpCxMfaU8M&stateCode=${parkSearchQuery}`
+      const url = `https://developer.nps.gov/api/v1/parks?api_key=FcBVNSTUhHmVDsktfx7MkAgtGyTTnEqpCxMfaU8M&stateCode=${value}`
       const response = await fetch(url)
       const resJSON = await response.json()
       console.log(resJSON.data)
-      setParks(resJSON.data)
+      setParks(resJSON.data)  
     }
-    getParks()
-  }, [parkSearchQuery])
+
 
   const HandleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value
     SetValue(newValue)
-
   }
 
   const SubmitParkValueForSearch = async (
     e: React.MouseEvent<HTMLButtonElement>
   ) => {
+
     e.preventDefault()
-    setParkSearchQuery(value)
+    saveToLocalStorage(parks)
+    getParks()
     navigate(`/Parks?state=${value}`)
-    console.log(parkSearchQuery)
-
-    // SetValue("")
   }
 
-  const saveToLocalStorage = (items: string) => {
+  const saveToLocalStorage = (items: Datum[]) => {
     localStorage.setItem("park-search-input", JSON.stringify(items))
-  }
-
-  const AlsoSaveToLocalStorage = (items: string) => {
-    localStorage.setItem("park-search-query", JSON.stringify(items))
   }
 
   return (
@@ -87,4 +67,4 @@ const Searchbar = () => {
   )
 }
 
-export default Searchbar
+export default HomeSearchBar
