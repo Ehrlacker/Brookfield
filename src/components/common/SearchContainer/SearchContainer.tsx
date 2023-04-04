@@ -1,10 +1,18 @@
 
-import Searchbar from 'components/common/Searchbar/Searchbar'
+// import Searchbar from 'components/common/Searchbar/Searchbar'
+import { ReactNode } from 'react'
 
-const SearchContainer = () => {
+
+interface SearchBar{
+search?: ReactNode
+background:string;
+}
+
+const SearchContainer = ({search, background}:SearchBar) => {
     return (
-      <div className="SearchContainer">
-        <Searchbar />
+      <div className="SearchContainer" style={{backgroundImage:`url(${background})`} }>
+        {search}
+        {/* <Searchbar /> */}
       </div>
     )
   }

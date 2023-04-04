@@ -32,8 +32,9 @@ const Searchbar = () => {
     if(parkSearchQuery.length === 0){
       return
     }
+    
     const getParks = async () => {
-      const url = `https://developer.nps.gov/api/v1/parks?api_key=FcBVNSTUhHmVDsktfx7MkAgtGyTTnEqpCxMfaU8M&stateCode=${parkSearchQuery}`
+      const url = `https://developer.nps.gov/api/v1/parks?api_key=${process.env.REACT_APP_apikey}&limit=10`
       const response = await fetch(url)
       const resJSON = await response.json()
       console.log(resJSON.data)

@@ -31,7 +31,7 @@ const Park = ({ image, name, location, id, clickHandler }: park) => {
       <div className="ParkButtonDiv">
         <RectangleButton
           name="Details"
-          clickHandler={() =>  navigate(`/park/${id}`)}
+          clickHandler={() =>  navigate(`/parks/${id}`)}
         />
       </div>
     </div>
