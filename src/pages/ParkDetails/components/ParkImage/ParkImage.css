@@ -1,0 +1,23 @@
+.ParkImage {
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  height: 450px;
+  max-width: 1130px;
+  width: 100%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .ParkImage {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ParkImage {
+    margin-top: 0;
+  }
+}

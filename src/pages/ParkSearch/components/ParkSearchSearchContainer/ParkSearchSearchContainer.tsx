@@ -1,5 +1,3 @@
-import React from "react"
-
 import "./ParkSearchSearchContainer.css"
 
 import Searchbar from "components/common/Searchbar/Searchbar"

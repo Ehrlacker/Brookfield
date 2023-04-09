@@ -7,7 +7,7 @@ import Footer from "components/common/Footer/Footer"
 
 import Home from "pages/Home/Home"
 import ParkSearch from "pages/ParkSearch/ParkSearch"
-import ParkDetails from 'pages/ParkDetails/ParkDetails'
+import ParkDetails from 'pages/ParkDetails/ParkDetailsPage/ParkDetails'
 
 import NumberParkSearchProviderProvider from "contexts/ParkSearchProvider"
 

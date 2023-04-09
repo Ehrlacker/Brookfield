@@ -29,10 +29,10 @@ const Searchbar = () => {
 
   // const parks = useParks(parkSearchQuery)
   useEffect(() => {
-    if(parkSearchQuery.length === 0){
+    if (parkSearchQuery.length === 0) {
       return
     }
-    
+
     const getParks = async () => {
       const url = `https://developer.nps.gov/api/v1/parks?api_key=${process.env.REACT_APP_apikey}&limit=10`
       const response = await fetch(url)
@@ -46,7 +46,6 @@ const Searchbar = () => {
   const HandleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value
     SetValue(newValue)
-
   }
 
   const SubmitParkValueForSearch = async (
@@ -56,16 +55,6 @@ const Searchbar = () => {
     setParkSearchQuery(value)
     navigate(`/Parks?state=${value}`)
     console.log(parkSearchQuery)
-
-    // SetValue("")
-  }
-
-  const saveToLocalStorage = (items: string) => {
-    localStorage.setItem("park-search-input", JSON.stringify(items))
-  }
-
-  const AlsoSaveToLocalStorage = (items: string) => {
-    localStorage.setItem("park-search-query", JSON.stringify(items))
   }
 
   return (

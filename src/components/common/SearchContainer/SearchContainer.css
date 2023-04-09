@@ -2,10 +2,10 @@
 
 
 .SearchContainer {
-    background-image: url("../Assets/thimo-pedersen-TWCnHKKhqSo-unsplash.jpg");
     background-size: cover;
+    background-position: center center;
     object-fit: cover;
-    height: 4500px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;

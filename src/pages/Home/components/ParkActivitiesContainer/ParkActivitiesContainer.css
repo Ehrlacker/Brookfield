@@ -8,7 +8,7 @@
   /* background-color: #ecdbba; */
   /* max-width: 1330px; */
   /* width: 100%; */
-  max-width: 1330px;
+  max-width: 1130px;
   width: 100%;
   height: 100%;
   margin-top: 2rem;
@@ -33,8 +33,8 @@
   background-color: #c84b31;
   color: white;
   border-radius: 2rem;
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: .75rem;
+  font-size: 1.25rem;
   font-weight: bold;
   margin: 2rem 1rem 2rem 1rem;
 }

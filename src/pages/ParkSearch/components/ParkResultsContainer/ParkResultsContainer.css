@@ -2,7 +2,8 @@
 
 .ParkResultsContainer{
     /* background-color:#ECDBBA; */
-    background-color: #dddbca;
+    /* background-color: #dddbca; */
+    background-color: #f2f2f2;
     /* max-height: 1500px; */
     min-height: 1000px;
     display: flex;

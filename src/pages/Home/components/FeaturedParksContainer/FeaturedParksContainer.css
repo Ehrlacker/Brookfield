@@ -7,18 +7,18 @@
   flex-wrap: wrap;
   justify-content: center;
   /* width: 100%; */
-  max-width: 1330px;
+  max-width: 1130px;
   height: 100%;
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 1130px) {
   .ParkListContainer{
     width: 100vw;
   }
 
   .ParkList {
     justify-content: normal;
-    padding: 2rem;
+    padding: 2rem 0 2rem 0;
     overflow-x: scroll;
     width: 100vw;
     max-width: 100%;

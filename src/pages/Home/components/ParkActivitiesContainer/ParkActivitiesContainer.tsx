@@ -32,8 +32,6 @@ const ParkActivitiesContainer = () => {
             name={activity.name}
             url={activity.url} />
 
-            // <img src={activity.url} alt="a picture of an outoor activity" />
-            // <h1>{activity.name}</h1>
           )
         })}
         </ul>
