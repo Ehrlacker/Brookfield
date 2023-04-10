@@ -1,7 +1,4 @@
 
-
-
-import SectionTitles from 'components/common/SectionTitles/SectionTitles'
 import ParkDescription from 'pages/ParkDetails/components/ParkDescription/ParkDescription'
 import './ParkDetailsContiner.css'
 

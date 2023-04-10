@@ -1,0 +1,32 @@
+
+
+.ParkLocationContainer{
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid;
+    max-width: 1130px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.ParkLocationsHeader{
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ParkLocationsChoose{
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+@media(max-width:480px){
+    .ParkLocationsTitle{
+        font-size: 1.25rem;
+    }
+}

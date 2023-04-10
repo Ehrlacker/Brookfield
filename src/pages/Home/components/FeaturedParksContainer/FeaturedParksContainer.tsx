@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import SectionTitles from "components/common/SectionTitles/SectionTitles"
 import Park from "components/common/Park/Park"
-import {PlusCircleIcon} from '@heroicons/react/24/outline'
 import "./FeaturedParksContainer.css"
 
 const FeaturedParksContainer = () => {
@@ -13,13 +12,12 @@ const FeaturedParksContainer = () => {
     )
       .then((response) => response.json())
       .then((json) => setParks(json.data))
-    // console.log(parks)
   }, [])
 
   return (
     <div className="FeaturedParksContainer">
       <SectionTitles name="Featured National Parks" />
-{/* <div className="ParkListContainer"> */}
+
       <ul className="ParkList">
         {parks.map((park) => {
           return (
@@ -29,12 +27,13 @@ const FeaturedParksContainer = () => {
               image={park.images[0].url}
               name={park.fullName}
               location={park.states}
-              clickHandler={()=>{console.log("clicked")}}
+              clickHandler={() => {
+                console.log("clicked")
+              }}
             />
           )
         })}
       </ul>
-      {/* </div> */}
     </div>
   )
 }

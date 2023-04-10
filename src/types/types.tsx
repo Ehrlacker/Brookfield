@@ -51,8 +51,8 @@ export interface Address {
     stateCode:  string;
     line1:      string;
     type:       AddressType;
-    line3:      string;
-    line2:      string;
+    // line3:      string;
+    // line2:      string;
 }
 
 export enum AddressType {
@@ -72,8 +72,8 @@ export interface EmailAddress {
 
 export interface PhoneNumber {
     phoneNumber: string;
-    description: string;
-    extension:   string;
+    // description: string;
+    // extension:   string;
     type:        PhoneNumberType;
 }
 

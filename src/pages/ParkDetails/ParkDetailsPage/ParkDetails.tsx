@@ -6,6 +6,8 @@ import "./ParkDetails.css"
 import ParkDetailsActivitiesContainer from "pages/ParkDetails/components/ParkDetailsActivitiesContainer/ParkDetailsActivitiesContainer"
 import ParkImage from "pages/ParkDetails/components/ParkImage/ParkImage"
 
+import ParkLocationsContainer from 'pages/ParkDetails/components/ParkLocationContainer/ParkLocationContainer'
+
 const ParkDetails = () => {
   const [park, setPark] = useState<Datum[]>([])
   const { id } = useParams()
@@ -33,6 +35,7 @@ const ParkDetails = () => {
               parkName={newPark.fullName}
             />
             <ParkDetailsActivitiesContainer array={newPark} />
+            <ParkLocationsContainer array={newPark} />
           </>
         )
       })}

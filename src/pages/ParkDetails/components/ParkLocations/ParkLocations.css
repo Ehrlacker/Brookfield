@@ -1,0 +1,42 @@
+
+
+.ParkLocations{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.ParkLocationsTitle{
+  
+    font-weight: bold;
+    text-align: left;
+}
+
+.ParkLocationsDescription{
+    text-align: left; 
+}
+
+@media(max-width:768px){
+    .ParkLocationsDescription{
+      font-size: .75rem;
+    }
+    .ParkLocationsTitle{
+        font-size: .75rem;
+    }
+
+
+  }
+  
+  @media(max-width:480px){
+    .ParkLocationsDescription {
+        font-size: .5rem;
+      }
+
+      .ParkLocationsTitle{
+        font-size: .5rem;
+      }
+  
+ 
+  }
