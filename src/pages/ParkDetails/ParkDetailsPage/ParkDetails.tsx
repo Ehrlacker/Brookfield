@@ -1,10 +1,9 @@
-import SearchContainer from "components/common/SearchContainer/SearchContainer"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Datum } from "types/types"
 import ParkDetailsContainer from "pages/ParkDetails/components/ParkDescription/ParkDescription"
 import "./ParkDetails.css"
-import ParkDescriptionActivities from "pages/ParkDetails/components/ParkDescriptionActivities/ParkDescriptionActivities"
+import ParkDetailsActivitiesContainer from "pages/ParkDetails/components/ParkDetailsActivitiesContainer/ParkDetailsActivitiesContainer"
 import ParkImage from "pages/ParkDetails/components/ParkImage/ParkImage"
 
 const ParkDetails = () => {
@@ -33,19 +32,7 @@ const ParkDetails = () => {
               description={newPark.directionsInfo}
               parkName={newPark.fullName}
             />
-            <div className="ParkActivitiesSection">
-              <h1 className="ParkActivitiesContainerTitle">Activities</h1>
-              <div className="parkActivitiesContainer">
-                {newPark.activities.map((activity) => {
-                  return (
-                    <ParkDescriptionActivities
-                      id={activity.id}
-                      name={activity.name}
-                    />
-                  )
-                })}
-              </div>
-            </div>
+            <ParkDetailsActivitiesContainer array={newPark} />
           </>
         )
       })}

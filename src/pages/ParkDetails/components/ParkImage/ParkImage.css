@@ -13,11 +13,15 @@
 @media (max-width: 768px) {
   .ParkImage {
     margin-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 }
 
 @media (max-width: 480px) {
   .ParkImage {
     margin-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 }

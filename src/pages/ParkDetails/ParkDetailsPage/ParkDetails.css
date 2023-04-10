@@ -12,23 +12,6 @@
   width: 100%;
 }
 
-.ParkActivitiesSection {
-  padding: 1rem 0 1rem 0;
-  border-bottom: 1px solid;
-  max-width: 1130px;
-  width: 100%;
-  background-color: white;
- 
-}
 
-.parkActivitiesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1130px;
-  width: 100%;
-}
 
-.ParkActivitiesContainerTitle {
-  text-align: left;
-  margin-left: 1rem;
-}
+

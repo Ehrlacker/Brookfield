@@ -23,18 +23,14 @@ const Searchbar = () => {
   console.log(params.get("state"))
 
   const [parkSearchQuery, setParkSearchQuery] = useState("")
-
-  // let location = useLocation()
   const navigate = useNavigate()
 
-  // const parks = useParks(parkSearchQuery)
   useEffect(() => {
     if (parkSearchQuery.length === 0) {
       return
     }
-
     const getParks = async () => {
-      const url = `https://developer.nps.gov/api/v1/parks?api_key=${process.env.REACT_APP_apikey}&limit=10`
+      const url =  `https://developer.nps.gov/api/v1/parks?api_key=${process.env.REACT_APP_apikey}&stateCode=${parkSearchQuery}`
       const response = await fetch(url)
       const resJSON = await response.json()
       console.log(resJSON.data)
