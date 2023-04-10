@@ -14,7 +14,7 @@
 .Link{
     text-decoration: none;
    font-weight: bold; 
-   
+   color: black;
 }
 
 .Link:visited{
