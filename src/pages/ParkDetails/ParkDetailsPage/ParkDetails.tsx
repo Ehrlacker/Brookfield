@@ -5,8 +5,9 @@ import ParkDetailsContainer from "pages/ParkDetails/components/ParkDescription/P
 import "./ParkDetails.css"
 import ParkDetailsActivitiesContainer from "pages/ParkDetails/components/ParkDetailsActivitiesContainer/ParkDetailsActivitiesContainer"
 import ParkImage from "pages/ParkDetails/components/ParkImage/ParkImage"
+import ParkLocationsContainer from "pages/ParkDetails/components/ParkLocationContainer/ParkLocationContainer"
 
-import ParkLocationsContainer from 'pages/ParkDetails/components/ParkLocationContainer/ParkLocationContainer'
+import GoogleMaps from "pages/ParkDetails/components/GoogleMaps/GoogleMap"
 
 const ParkDetails = () => {
   const [park, setPark] = useState<Datum[]>([])
@@ -36,6 +37,17 @@ const ParkDetails = () => {
             />
             <ParkDetailsActivitiesContainer array={newPark} />
             <ParkLocationsContainer array={newPark} />
+            <GoogleMaps
+              center={{
+                lat: parseFloat(newPark.latitude),
+                lng: parseFloat(newPark.longitude),
+              }}
+              zoom={13}
+              position={{
+                lat: parseFloat(newPark.latitude),
+                lng: parseFloat(newPark.longitude),
+              }}
+            />
           </>
         )
       })}

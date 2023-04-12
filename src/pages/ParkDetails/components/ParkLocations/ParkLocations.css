@@ -2,20 +2,31 @@
 
 .ParkLocations{
     display: flex;
-    flex-direction: column;
+   
     align-items: start;
     justify-content: center;
     margin-left: 1rem;
 }
 
+.ParkLocationsDescriptionWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 2rem 1rem 0;
+  text-align: center;
+}
+
 .ParkLocationsTitle{
-  
     font-weight: bold;
     text-align: left;
+    
 }
 
 .ParkLocationsDescription{
     text-align: left; 
+    
 }
 
 @media(max-width:768px){
