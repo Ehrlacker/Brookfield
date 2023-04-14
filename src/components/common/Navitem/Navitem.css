@@ -14,9 +14,9 @@
 .Link{
     text-decoration: none;
    font-weight: bold; 
-   color: black;
+   color: #C84B31;
 }
 
 .Link:visited{
-color: black;
+color: #C84B31
 }

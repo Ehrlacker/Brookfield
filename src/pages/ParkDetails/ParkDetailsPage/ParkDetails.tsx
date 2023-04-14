@@ -6,8 +6,9 @@ import "./ParkDetails.css"
 import ParkDetailsActivitiesContainer from "pages/ParkDetails/components/ParkDetailsActivitiesContainer/ParkDetailsActivitiesContainer"
 import ParkImage from "pages/ParkDetails/components/ParkImage/ParkImage"
 import ParkLocationsContainer from "pages/ParkDetails/components/ParkLocationContainer/ParkLocationContainer"
-
+import FoodOrActivityFormContainer from 'pages/ParkDetails/components/FoodOrActivityFormContainer/FoodOrActivityFormContainer'
 import GoogleMaps from "pages/ParkDetails/components/GoogleMaps/GoogleMap"
+
 
 const ParkDetails = () => {
   const [park, setPark] = useState<Datum[]>([])
@@ -48,9 +49,13 @@ const ParkDetails = () => {
                 lng: parseFloat(newPark.longitude),
               }}
             />
+            <FoodOrActivityFormContainer />
           </>
         )
       })}
+      
+     
+      
     </div>
   )
 }

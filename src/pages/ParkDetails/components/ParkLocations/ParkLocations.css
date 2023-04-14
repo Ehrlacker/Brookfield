@@ -2,7 +2,6 @@
 
 .ParkLocations{
     display: flex;
-   
     align-items: start;
     justify-content: center;
     margin-left: 1rem;
@@ -20,8 +19,7 @@
 
 .ParkLocationsTitle{
     font-weight: bold;
-    text-align: left;
-    
+    text-align: left;   
 }
 
 .ParkLocationsDescription{
@@ -42,11 +40,11 @@
   
   @media(max-width:480px){
     .ParkLocationsDescription {
-        font-size: .5rem;
+        font-size: .75rem;
       }
 
       .ParkLocationsTitle{
-        font-size: .5rem;
+        font-size: .75rem;
       }
   
  

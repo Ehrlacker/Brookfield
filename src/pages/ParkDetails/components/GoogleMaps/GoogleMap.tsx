@@ -1,4 +1,4 @@
-import { GoogleMap, useLoadScript, MarkerF,} from "@react-google-maps/api"
+import { GoogleMap, useLoadScript, MarkerF} from "@react-google-maps/api"
 import "./GoogleMaps.css"
 
 type Lat = {
@@ -17,23 +17,29 @@ interface MapProps {
 
 const GoogleMaps = ({ center, zoom, position }: MapProps) => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey:`${process.env.REACT_APP_googleApi_Key}`
-    ,
-    libraries: ["places"],
+    googleMapsApiKey: `${process.env.REACT_APP_googleApi_Key}`,
   })
 
+
+
+ 
   if (!isLoaded) return <div>Loading...</div>
   return (
-   
     <GoogleMap
       mapContainerClassName="GoogleMapSize"
       zoom={zoom}
       center={center}
     >
       <MarkerF position={position} />
- 
     </GoogleMap>
+    
+   
   )
+  
 }
 
 export default GoogleMaps
+
+
+
+

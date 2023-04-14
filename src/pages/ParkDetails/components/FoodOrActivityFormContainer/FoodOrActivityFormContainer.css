@@ -1,0 +1,55 @@
+.FoodOrActivityFormContainer {
+  max-width: 1130px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0rem 1rem 0rem;
+  border-top: 1px solid;
+  background-color: white;
+}
+
+.FoodOrActivityFormContainerTitle {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.FormExplanationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FoodOrActivityFormContainerTitle{
+    margin-bottom: 1rem;
+}
+
+.FormContainer {
+  margin: 1rem 5rem 1rem 5rem;
+  max-width: 300px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecdbba;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 0.2);
+  border-radius: 2rem;
+}
+
+@media (max-width: 768px) {
+  .FormExplanationContainer {
+    flex-direction: column-reverse;
+  }
+  .FormContainer {
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+.FoodOrActivityFormContainerTitle{
+font-size: 1.25rem;
+}
+}

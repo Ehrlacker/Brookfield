@@ -26,7 +26,7 @@
 }
 
 @media(max-width:480px){
-    .ParkLocationsTitle{
+    .ParkLocationsHeader{
         font-size: 1.25rem;
     }
 }

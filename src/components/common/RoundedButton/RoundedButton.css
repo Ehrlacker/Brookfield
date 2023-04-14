@@ -5,8 +5,15 @@
     background-color: #C84B31;
     color: white;
     border-radius: 1.25rem;
-    padding: .4rem;
-    font-size: 2rem;
-    font-weight: bold;
-    
+    padding: .3rem;
+    font-size: 1rem;
+    font-weight: bold; 
+    max-width: 5rem;
+    width: 100%;
 }
+
+.RoundedButton:hover{
+    cursor: pointer;
+    background-color: #a7422e;
+}
+

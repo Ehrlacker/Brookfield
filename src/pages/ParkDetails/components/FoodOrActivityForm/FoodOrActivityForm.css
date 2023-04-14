@@ -1,0 +1,36 @@
+.FoodOrActivityForm {
+    padding: 0.5rem; 
+}
+
+.FoodOrActivityFormLabel {
+  color: #c84b31;
+  font-weight: bold;
+  margin-right: 0.25rem;
+  font-size: 1rem;
+}
+
+.FoodOrActivityFormInput {
+  border-radius: 2rem;
+  border: solid 1px;
+  padding: 0.25rem;
+  max-width: 20rem;
+  width:100%;
+ 
+}
+.FoodOrActivityFormInput:focus {
+  outline: none;
+}
+
+
+.FoodOrActivityFormInput::placeholder{
+    color: rgb(47, 47, 47);
+}
+
+
+.FoodOrActivityFormInput:-ms-input-placeholder {
+    color: rgb(47, 47, 47);
+  }
+  
+  .FoodOrActivityFormInput::-ms-input-placeholder { 
+    color: rgb(47, 47, 47);
+  }
