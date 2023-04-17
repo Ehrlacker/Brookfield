@@ -8,6 +8,7 @@ import ParkImage from "pages/ParkDetails/components/ParkImage/ParkImage"
 import ParkLocationsContainer from "pages/ParkDetails/components/ParkLocationContainer/ParkLocationContainer"
 import FoodOrActivityFormContainer from 'pages/ParkDetails/components/FoodOrActivityFormContainer/FoodOrActivityFormContainer'
 import GoogleMaps from "pages/ParkDetails/components/GoogleMaps/GoogleMap"
+// import GoogleMap from 'pages/ParkDetails/components/MapTwo/MapTwo'
 
 
 const ParkDetails = () => {
@@ -50,9 +51,22 @@ const ParkDetails = () => {
               }}
             />
             <FoodOrActivityFormContainer />
+            {/* <GoogleMap
+            center={{
+              lat: parseFloat(newPark.latitude),
+              lng: parseFloat(newPark.longitude),
+            }}
+            zoom={13}
+            position={{
+              lat: parseFloat(newPark.latitude),
+              lng: parseFloat(newPark.longitude),
+            }} /> */}
           </>
+          
         )
+        
       })}
+      
       
      
       

@@ -1,13 +1,13 @@
 import "./RoundedButton.css"
 
-type button = {
+export type button = {
   text: string
-  clickHandler: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void
+  clickHandler: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 const RoundedButton = ({ text, clickHandler }: button) => {
   return (
-    <button className="RoundedButton" onClick={clickHandler}>
+    <button className="RoundedButton" type="submit" onClick={clickHandler}>
       {text}
     </button>
   )

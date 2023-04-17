@@ -27,6 +27,7 @@ const FoodOrActivityForm = ({
         type={inputType}
         value={value}
         onChange={onChange}
+
       />
     </div>
   )

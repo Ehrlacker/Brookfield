@@ -1,4 +1,4 @@
-import { GoogleMap, useLoadScript, MarkerF} from "@react-google-maps/api"
+import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
 import "./GoogleMaps.css"
 
 type Lat = {
@@ -20,9 +20,6 @@ const GoogleMaps = ({ center, zoom, position }: MapProps) => {
     googleMapsApiKey: `${process.env.REACT_APP_googleApi_Key}`,
   })
 
-
-
- 
   if (!isLoaded) return <div>Loading...</div>
   return (
     <GoogleMap
@@ -32,14 +29,7 @@ const GoogleMaps = ({ center, zoom, position }: MapProps) => {
     >
       <MarkerF position={position} />
     </GoogleMap>
-    
-   
   )
-  
 }
 
 export default GoogleMaps
-
-
-
-
