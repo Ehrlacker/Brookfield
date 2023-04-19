@@ -1,0 +1,24 @@
+
+
+.TripPlansContainer{
+    max-width: 1130px;
+    width: 100%;
+    background-color: white;
+    min-height: 500px;
+    height: 100%;
+}
+
+.TripPlansWrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem; 
+}
+
+.TripPlansTitle{
+    text-align: left;
+    margin: 1rem;
+}
+
+.TripPlansFoodActivity{
+    text-decoration: underline;
+}

@@ -11,6 +11,7 @@
     max-width: 500px;
     width: 100%;
     background-color: #ECDBBA;
+    margin-right: 1rem;
 }
 
 .ParagraphExplanation{
@@ -25,5 +26,6 @@
     .FoodOrActivityExplanation{
       max-width: 100%;
       border-radius: 0;
+      margin-right: 0;
     }
   }

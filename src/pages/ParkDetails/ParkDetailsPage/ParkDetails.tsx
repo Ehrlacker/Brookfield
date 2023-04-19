@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
 import { Datum } from "types/types"
 import ParkDetailsContainer from "pages/ParkDetails/components/ParkDescription/ParkDescription"
@@ -6,12 +6,14 @@ import "./ParkDetails.css"
 import ParkDetailsActivitiesContainer from "pages/ParkDetails/components/ParkDetailsActivitiesContainer/ParkDetailsActivitiesContainer"
 import ParkImage from "pages/ParkDetails/components/ParkImage/ParkImage"
 import ParkLocationsContainer from "pages/ParkDetails/components/ParkLocationContainer/ParkLocationContainer"
-import FoodOrActivityFormContainer from 'pages/ParkDetails/components/FoodOrActivityFormContainer/FoodOrActivityFormContainer'
+import FoodOrActivityFormContainer from "pages/ParkDetails/components/FoodOrActivityFormContainer/FoodOrActivityFormContainer"
 import GoogleMaps from "pages/ParkDetails/components/GoogleMaps/GoogleMap"
-// import GoogleMap from 'pages/ParkDetails/components/MapTwo/MapTwo'
+import TripPlansContainer from "pages/ParkDetails/components/TripPlansContainer/TripPlansContainer"
+import { TripPlansContext } from "contexts/TripPlansProvider"
 
 
 const ParkDetails = () => {
+  const { activities, setActivities } = useContext(TripPlansContext)
   const [park, setPark] = useState<Datum[]>([])
   const { id } = useParams()
 
@@ -51,25 +53,10 @@ const ParkDetails = () => {
               }}
             />
             <FoodOrActivityFormContainer />
-            {/* <GoogleMap
-            center={{
-              lat: parseFloat(newPark.latitude),
-              lng: parseFloat(newPark.longitude),
-            }}
-            zoom={13}
-            position={{
-              lat: parseFloat(newPark.latitude),
-              lng: parseFloat(newPark.longitude),
-            }} /> */}
+            <TripPlansContainer  array={activities} />
           </>
-          
         )
-        
       })}
-      
-      
-     
-      
     </div>
   )
 }

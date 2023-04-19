@@ -1,29 +1,31 @@
-import { useState, ChangeEvent, MouseEvent } from "react"
+import { useState, ChangeEvent, MouseEvent, useContext } from "react"
 import FoodOrActivityForm from "pages/ParkDetails/components/FoodOrActivityForm/FoodOrActivityForm"
 import "./FoodOrActivityFormContainer.css"
 import FoodOrActivityExplanation from "pages/ParkDetails/components/FoodOrActivityExplanation/FoodOrActivityExplanation"
 import RoundedButton from "components/common/RoundedButton/RoundedButton"
+import { TripPlansContext } from "contexts/TripPlansProvider"
+import { v4 as uuidV4 } from 'uuid';
 
-import {button} from 'components/common/RoundedButton/RoundedButton'
-type inputPropValues = {
+export type inputPropValues = {
   activityType: string
   Name: string
   Address: string
   cityStateZipcode: string
+  id: string
 }
 
 const FoodOrActivityFormContainer = () => {
-  const [activities, setActivities] = useState<inputPropValues[]>([])
+  const { activities, setActivities } = useContext(TripPlansContext)
   const [inputValues, setInputValues] = useState<inputPropValues>({
     activityType: "",
     Name: "",
     Address: "",
     cityStateZipcode: "",
+    id: ""
   })
 
   const handleRegister = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target
-    console.log(inputValues)
     setInputValues((prevValue) => {
       return { ...prevValue, [id]: value }
     })
@@ -31,25 +33,42 @@ const FoodOrActivityFormContainer = () => {
 
   const submitActivity = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    const newActivityList = [...activities, inputValues]
-    setActivities(newActivityList)
-    setInputValues({
-      activityType: "",
-      Name: "",
-      Address: "",
-      cityStateZipcode: "",
-    })
-    console.log(activities)
+
+    if (inputValues.activityType.length === 0) {
+      return
+    } else if (inputValues.activityType !== "food"  && inputValues.activityType !== "activity") {
+      return
+    } else if (inputValues.Name.length === 0) {
+      return
+    } else if (inputValues.Address.length === 0) {
+      return
+    } else if (inputValues.cityStateZipcode.length === 0) {
+      return
+    } else {
+      inputValues.id=uuidV4()
+      const newActivityList = [...activities, inputValues]
+      setActivities(newActivityList)
+
+
+      setInputValues({
+        activityType: "",
+        Name: "",
+        Address: "",
+        cityStateZipcode: "",
+        id: ""
+      })
+      console.log(activities)
+    }
   }
 
   return (
     <div className="FoodOrActivityFormContainer">
-      <h1 className="FoodOrActivityFormContainerTitle">Trip Plans</h1>
+      <h1 className="FoodOrActivityFormContainerTitle">Add Plans</h1>
       <div className="FormExplanationContainer">
         <form className="FormContainer">
           <FoodOrActivityForm
             labelType="Type"
-            placeholder="Food or Entertainment"
+            placeholder="food or activity"
             id="activityType"
             inputType="text"
             value={inputValues.activityType}
@@ -57,7 +76,7 @@ const FoodOrActivityFormContainer = () => {
           />
           <FoodOrActivityForm
             labelType="Name"
-            placeholder="Name"
+            placeholder="name"
             id="Name"
             inputType="text"
             value={inputValues.Name}
@@ -65,7 +84,7 @@ const FoodOrActivityFormContainer = () => {
           />
           <FoodOrActivityForm
             labelType="Address"
-            placeholder="Address"
+            placeholder="address"
             id="Address"
             inputType="text"
             value={inputValues.Address}
@@ -73,7 +92,7 @@ const FoodOrActivityFormContainer = () => {
           />
           <FoodOrActivityForm
             labelType="Location"
-            placeholder="City, State, Zipcode"
+            placeholder="city, state, zipcode"
             id="cityStateZipcode"
             inputType="text"
             value={inputValues.cityStateZipcode}

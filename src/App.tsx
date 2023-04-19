@@ -9,19 +9,23 @@ import Home from "pages/Home/Home"
 import ParkSearch from "pages/ParkSearch/ParkSearch"
 import ParkDetails from 'pages/ParkDetails/ParkDetailsPage/ParkDetails'
 
-import NumberParkSearchProviderProvider from "contexts/ParkSearchProvider"
+import ParkSearchProvider from "contexts/ParkSearchProvider"
+import TripPlansProvider from 'contexts/TripPlansProvider'
 
 const App = () => {
   return (
     <div className="App">
       <Nav />
-      <NumberParkSearchProviderProvider>
+
+      <TripPlansProvider>
+      <ParkSearchProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/parks" element={<ParkSearch />} />
           <Route path="/parks/:id" element={<ParkDetails />} />
         </Routes>
-      </NumberParkSearchProviderProvider>
+      </ParkSearchProvider>
+      </TripPlansProvider>
       <Footer />
     </div>
   )

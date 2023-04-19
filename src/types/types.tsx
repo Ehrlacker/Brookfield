@@ -131,3 +131,19 @@ export class Convert {
         return JSON.stringify(value);
     }
 }
+
+
+//   export type inputPropValuesArray={
+//       array:inputPropValues[]
+//   }
+
+//   export type inputPropValues = {
+//     activityType: string
+//     Name: string
+//     Address: string
+//     cityStateZipcode: string
+//     key: string
+//     id: string
+//   }
+
+

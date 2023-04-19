@@ -7,6 +7,7 @@
   padding: 1rem 0rem 1rem 0rem;
   border-top: 1px solid;
   background-color: white;
+  border-bottom: 1px solid;
 }
 
 .FoodOrActivityFormContainerTitle {
@@ -16,7 +17,7 @@
 
 .FormExplanationContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -42,6 +43,10 @@
   .FormExplanationContainer {
     flex-direction: column-reverse;
   }
+  .FormContainer{
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
   .FormContainer {
     max-width: 100%;
     border-radius: 0;

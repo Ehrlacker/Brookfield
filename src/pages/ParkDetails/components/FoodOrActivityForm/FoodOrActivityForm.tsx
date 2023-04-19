@@ -1,5 +1,5 @@
-import { ChangeEvent} from "react"
-import './FoodOrActivityForm.css'
+import { ChangeEvent } from "react"
+import "./FoodOrActivityForm.css"
 
 export type inputProps = {
   labelType: string
@@ -10,24 +10,26 @@ export type inputProps = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
+
 const FoodOrActivityForm = ({
   labelType,
   placeholder,
   id,
   inputType,
   value,
+
   onChange,
 }: inputProps) => {
   return (
     <div className="FoodOrActivityForm">
       <label className="FoodOrActivityFormLabel">{labelType}</label>
-      <input className="FoodOrActivityFormInput"
+      <input
+        className="FoodOrActivityFormInput"
         placeholder={placeholder}
         id={id}
         type={inputType}
         value={value}
         onChange={onChange}
-
       />
     </div>
   )

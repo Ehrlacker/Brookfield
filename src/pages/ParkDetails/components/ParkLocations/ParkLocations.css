@@ -2,8 +2,9 @@
 
 .ParkLocations{
     display: flex;
-    align-items: start;
-    justify-content: center;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
     margin-left: 1rem;
 }
 
