@@ -5,6 +5,7 @@
   border-radius: 1rem;
   padding: 0.5rem;
   word-wrap: break-word;
+  margin: 1rem;
 }
 
 .TripPlansType {
@@ -15,7 +16,7 @@
   all: unset;
   width: 18px;
   color: red;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
 }
 
 .TripPlansButton:hover {

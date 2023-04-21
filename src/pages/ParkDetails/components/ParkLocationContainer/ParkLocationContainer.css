@@ -30,4 +30,12 @@
     .ParkLocationsHeader{
         font-size: 1.25rem;
     }
+    
+    
+    .TripPlansBox{
+        max-width: 150px;
+        width: 100%;
+    }
+    
+
 }

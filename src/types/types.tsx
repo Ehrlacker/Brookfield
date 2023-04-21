@@ -133,17 +133,17 @@ export class Convert {
 }
 
 
-//   export type inputPropValuesArray={
-//       array:inputPropValues[]
-//   }
+  export type inputPropValuesArray={
+      array:inputPropValues[]
+  }
 
-//   export type inputPropValues = {
-//     activityType: string
-//     Name: string
-//     Address: string
-//     cityStateZipcode: string
-//     key: string
-//     id: string
-//   }
+  export type inputPropValues = {
+    activityType: string
+    Name: string
+    Address: string
+    cityStateZipcode: string
+    key: string
+    id: string
+  }
 
 
