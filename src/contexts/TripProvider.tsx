@@ -1,13 +1,23 @@
 import { createContext } from "react"
 import useLocalStorage from 'hooks/UseLocalStorage'
+import {Datum } from 'types/types'
+import { inputPropValues } from "types/types"
+
+
+
+type trip = {
+  park: Datum[]
+  activities: inputPropValues[]
+  id: string
+}
 
 type TripContextProviderprops = {
   children: React.ReactNode
 }
 
 type TripState = {
-  trip: any[]
-  setTrip: (trip: any[]) => void
+  trip: trip[]
+  setTrip: (trip: trip[]) => void
 }
 
 export const TripContext = createContext<TripState>({
@@ -16,7 +26,7 @@ export const TripContext = createContext<TripState>({
 })
 
 const TripProvider = ({ children }: TripContextProviderprops) => {
-  const [trip, setTrip] = useLocalStorage<any[]>("trip",[])
+  const [trip, setTrip] = useLocalStorage<trip[]>("trip",[])
   return (
     <TripContext.Provider value={{ trip, setTrip }}>
       {children}

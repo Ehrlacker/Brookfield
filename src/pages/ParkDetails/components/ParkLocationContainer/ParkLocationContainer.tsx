@@ -13,7 +13,7 @@ const ParkLocationContainer = ({ array }: array) => {
 
       {array.addresses.map((address) => {
         if (address.type === "Physical") {
-          return <ParkLocations key={address.postalCode}address={address} />
+          return <ParkLocations key={address.postalCode} address={address} />
         }
       })}
     </div>

@@ -1,40 +1,37 @@
-
-
-.TripPlansContainer{
-    max-width: 1130px;
-    width: 100%;
-    background-color: white;
-    min-height: 500px;
-    height: 100%;
-    margin-bottom: 1rem;
-    position: relative;
-    display: flex;
-     align-items: center;
-     flex-direction: column;
+.TripPlansContainer {
+  max-width: 1130px;
+  width: 100%;
+  background-color: white;
+  min-height: 500px;
+  height: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.TripPlansWrapper{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem; 
-    width: 100%;
+.TripPlansWrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  width: 100%;
 }
 
-.TripPlansBox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-    max-width: 320px;
-    width: 100%;
+.TripPlansBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  width: 100%;
 }
 
-.TripPlansTitle{
-    text-align: left;
-    padding: 1rem;
-    width: 100%;
+.TripPlansTitle {
+  text-align: left;
+  padding: 1rem;
+  width: 100%;
 }
 
-.TripPlansFoodActivity{
-    text-decoration: underline;
+.TripPlansFoodActivity {
+  text-decoration: underline;
 }

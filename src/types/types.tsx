@@ -142,8 +142,18 @@ export class Convert {
     Name: string
     Address: string
     cityStateZipcode: string
-    key: string
     id: string
+  }
+
+
+  export type activities = {
+      activity: inputPropValuesArray,
+      park:Datum[],
+      id:string,
+  }
+
+  export type allParks = {
+      allParks:Datum[],
   }
 
 

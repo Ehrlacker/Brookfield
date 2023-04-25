@@ -10,19 +10,20 @@ import FoodOrActivityFormContainer from "pages/ParkDetails/components/FoodOrActi
 import GoogleMaps from "pages/ParkDetails/components/GoogleMaps/GoogleMap"
 import TripPlansContainer from "pages/ParkDetails/components/TripPlansContainer/TripPlansContainer"
 import { TripPlansContext } from "contexts/TripPlansProvider"
-import {inputPropValuesArray} from 'types/types'
-import useLocalStorage from 'hooks/UseLocalStorage'
+import { v4 as uuidV4 } from "uuid"
+import { inputPropValues } from "types/types"
+import useLocalStorage from "hooks/UseLocalStorage"
 
-// type trip={
-//   park:Datum[];
-//   activities:inputPropValuesArray
-// }
-
+type trip = {
+  park: Datum[]
+  activities: inputPropValues[]
+  id: string
+}
 
 const ParkDetails = () => {
   const { activities, setActivities } = useContext(TripPlansContext)
   const [park, setPark] = useState<Datum[]>([])
-  const [trip, setTrip] = useLocalStorage<any[]>("trip",[])
+  const [trip, setTrip] = useLocalStorage<trip[]>("trip", [])
   const { id } = useParams()
 
   useEffect(() => {
@@ -36,11 +37,12 @@ const ParkDetails = () => {
     getPark()
   }, [id])
 
-
-const submitTripPlans = () => {
-  setTrip([{ park: park, activities: activities }, ...trip])
-}
-
+  const submitTripPlans = () => {
+    console.log(trip)
+    setTrip([{ park: park, activities: activities, id: uuidV4() }, ...trip])
+    setActivities([])
+    console.log(trip)
+  }
 
   return (
     <div className="ParkDetailsContainer">
@@ -67,7 +69,7 @@ const submitTripPlans = () => {
               }}
             />
             <FoodOrActivityFormContainer />
-            <TripPlansContainer clicked={submitTripPlans}  array={activities} />
+            <TripPlansContainer clicked={submitTripPlans} array={activities} />
           </>
         )
       })}
