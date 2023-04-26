@@ -32,7 +32,6 @@
   max-width: 200px;
   width: 100%;
   margin: 1rem 1rem 1rem 0;
-  border-radius: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -78,7 +77,6 @@
     background-size: cover;
     background-position: center center;
     object-fit: cover;
-    border-radius: 0;
   
   }
 }
