@@ -4,7 +4,7 @@ import NavItem from "components/common/Navitem/Navitem"
 import "./Navbar.css"
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(true)
+  const [isOpen, setOpen] = useState(false)
 
   if (isOpen) {
     return (

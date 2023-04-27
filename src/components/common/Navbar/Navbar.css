@@ -5,6 +5,11 @@
     right: 0;
     top:10px;
     background-color: #f2f2f2;
+    max-width: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 

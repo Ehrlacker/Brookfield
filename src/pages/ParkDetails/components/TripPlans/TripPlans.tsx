@@ -26,3 +26,7 @@ const TripPlans = ({ Name, Address, cityStateZipcode, activityType, id, button, 
 }
 
 export default TripPlans
+
+
+
+

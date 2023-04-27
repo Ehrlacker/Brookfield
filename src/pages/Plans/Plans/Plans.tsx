@@ -4,6 +4,7 @@ import PlanParkDetails from "pages/Plans/components/PlanParkDetails/PlanParkDeta
 import PlanParkActivities from "pages/Plans/components/PlanParkActivities/PlanParkActivities"
 import { Datum } from "types/types"
 import { inputPropValues } from "types/types"
+import { v4 as uuidV4 } from "uuid"
 import "./Plans.css"
 
 type trip = {
@@ -29,8 +30,10 @@ const Plans = () => {
         {trip.map((plan) => {
           return (
             <div className="PlansDetailsActivitiesWrapper">
-              <PlanParkDetails array={plan} />
+              <PlanParkDetails array={plan} key={plan.park[0].id} />
               <PlanParkActivities
+              // id={uuidV4()}
+              key={uuidV4()}
                 clicked={() => {
                   deleteTripPlan(plan)
                 }}
@@ -45,3 +48,6 @@ const Plans = () => {
 }
 
 export default Plans
+
+
+
