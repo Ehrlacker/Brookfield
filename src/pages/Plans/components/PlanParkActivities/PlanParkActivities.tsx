@@ -1,9 +1,11 @@
 import { Datum } from "types/types"
 import { inputPropValues } from "types/types"
+import RoundedButton from 'components/common/RoundedButton/RoundedButton'
 import "./PlanParkActivities.css"
 
 type array = {
   array: trip
+  clicked:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 type trip = {
@@ -12,7 +14,7 @@ type trip = {
   id: string
 }
 
-const PlanParkActivities = ({ array }: array) => {
+const PlanParkActivities = ({ array, clicked }: array) => {
   return (
     <div className="TripPlansContainer">
       <h1 className="TripPlansTitle">Planned Ameneties:</h1>
@@ -49,11 +51,11 @@ const PlanParkActivities = ({ array }: array) => {
           })}
         </div>
       </div>
-      {/* <RoundedButton
-        text="Save Trip"
+      <RoundedButton
+        text="Delete"
         clickHandler={clicked}
         style={{ position: "absolute", bottom: 10 }}
-      /> */}
+      />
     </div>
   )
 }
