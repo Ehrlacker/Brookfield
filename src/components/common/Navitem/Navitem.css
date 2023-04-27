@@ -3,7 +3,7 @@
 
 .NavItem{
     transition: all .2s ease-in-out;
-    margin: 0 1rem 0 1rem;
+    margin: 1rem;
     font-size: 1.5rem;
 }
 

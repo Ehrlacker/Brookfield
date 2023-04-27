@@ -1,5 +1,12 @@
 
 
+.NavbarHidden{
+    position: absolute;
+    right: 0;
+    top:10px;
+    background-color: #f2f2f2;
+}
+
 
 .Navbar{
     
