@@ -32,8 +32,7 @@ const Plans = () => {
             <div className="PlansDetailsActivitiesWrapper">
               <PlanParkDetails array={plan} key={plan.park[0].id} />
               <PlanParkActivities
-              // id={uuidV4()}
-              key={uuidV4()}
+                key={uuidV4()}
                 clicked={() => {
                   deleteTripPlan(plan)
                 }}
@@ -48,6 +47,3 @@ const Plans = () => {
 }
 
 export default Plans
-
-
-

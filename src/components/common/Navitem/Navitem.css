@@ -3,8 +3,12 @@
 
 .NavItem{
     transition: all .2s ease-in-out;
-    margin: 1rem;
+    margin:.75rem;
     font-size: 1.5rem;
+    border-bottom: solid white 1px;
+    width: 11rem;
+    text-align:end
+  
 }
 
 .NavItem:hover{
@@ -15,6 +19,10 @@
     text-decoration: none;
    font-weight: bold; 
    color: #C84B31;
+}
+
+.Link:hover{
+    transform: scale(1.1);
 }
 
 .Link:visited{

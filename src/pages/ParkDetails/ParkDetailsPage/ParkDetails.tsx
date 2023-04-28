@@ -1,5 +1,5 @@
-import { useState, useEffect, useContext } from "react"
-import { useParams } from "react-router-dom"
+import { useState, useEffect, useContext} from "react"
+import { useParams, useNavigate } from "react-router-dom"
 import { Datum } from "types/types"
 import ParkDetailsContainer from "pages/ParkDetails/components/ParkDescription/ParkDescription"
 import "./ParkDetails.css"
@@ -10,6 +10,7 @@ import FoodOrActivityFormContainer from "pages/ParkDetails/components/FoodOrActi
 import GoogleMaps from "pages/ParkDetails/components/GoogleMaps/GoogleMap"
 import TripPlansContainer from "pages/ParkDetails/components/TripPlansContainer/TripPlansContainer"
 import { TripPlansContext } from "contexts/TripPlansProvider"
+import {TripContext} from 'contexts/TripProvider'
 import { v4 as uuidV4 } from "uuid"
 import { inputPropValues } from "types/types"
 import useLocalStorage from "hooks/UseLocalStorage"
@@ -23,8 +24,9 @@ type trip = {
 const ParkDetails = () => {
   const { activities, setActivities } = useContext(TripPlansContext)
   const [park, setPark] = useState<Datum[]>([])
-  const [trip, setTrip] = useLocalStorage<trip[]>("trip", [])
+  const {trip, setTrip} = useContext(TripContext)
   const { id } = useParams()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const getPark = async () => {
@@ -38,11 +40,14 @@ const ParkDetails = () => {
   }, [id])
 
   const submitTripPlans = () => {
-    console.log(trip)
-    setTrip([{ park: park, activities: activities, id: uuidV4() }, ...trip])
+    const newTrip = [{ park: park, activities: activities, id: uuidV4() }, ...trip]
+    setTrip(newTrip)
     setActivities([])
-    console.log(trip)
+    navigate("/plans")
   }
+
+
+
 
   return (
     <div className="ParkDetailsContainer">
