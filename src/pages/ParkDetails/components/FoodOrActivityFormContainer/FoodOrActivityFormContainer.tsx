@@ -98,7 +98,10 @@ const FoodOrActivityFormContainer = () => {
             value={inputValues.cityStateZipcode}
             onChange={handleRegister}
           />
-          <RoundedButton text="save" clickHandler={submitActivity} />
+          <RoundedButton
+           text="save" 
+           clickHandler={submitActivity} 
+           style={{  "maxWidth": "13rem", "width": "100%", "marginTop": "1rem"}} />
         </form>
         <FoodOrActivityExplanation />
       </div>

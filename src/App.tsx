@@ -13,6 +13,7 @@ import ParkSearchProvider from "contexts/ParkSearchProvider"
 import TripPlansProvider from "contexts/TripPlansProvider"
 import TripProvider from "contexts/TripProvider"
 import Plans from "pages/Plans/Plans/Plans"
+import Auth from 'components/common/Auth/Auth'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
               <Route path="/parks" element={<ParkSearch />} />
               <Route path="/parks/:id" element={<ParkDetails />} />
               <Route path="/plans" element={<Plans />} />
+              <Route path="/signin" element={<Auth />} />
             </Routes>
           </ParkSearchProvider>
         </TripPlansProvider>
