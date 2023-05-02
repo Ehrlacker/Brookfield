@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# Brookfield
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+* Brookfield is an application that allows users to find and plan trips in and around US National Parks. My inspiration for this project came from my previous career as a Park Ranger. As a Park Ranger I visited many local, City, and State parks but i've never been to a National Park. I wanted a way to find National Parks and be able to have the ability to plan either day or extended trips to these parks. 
 
-## Available Scripts
+## View a demo of this project
+* <a href="https://brookfield-9d12fqkko-ehrlacker.vercel.app/" title="jokes">Demo</a>
 
-In the project directory, you can run:
+## Technology Used
+* Typescript
+* React
+* CSS
+* Git and GitHub
 
-### `npm start`
+## Lessons learned during development
+* Utilizing Typescript for a large, more complex project.
+* How to use Google Firebase for authentication.
+* How to utilize React context for state management.
+* Adding a map to a web application using Google maps API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
+### Once you've created your discord bot and discord server, follow the next steps.
+* Fork the repo to your account by clicking the Fork button on the top right corner of the repo.
+* Now clone the repo to your local storage.
+* Open your terminal and type the following command: https://github.com/YOUR_USERNAME/Brookfield.
+* Remember to actually replace YOUR_USERNAME with your actual username.
+* Install all dependencies.
+* Create a .env file in the root directory of your application.
+* Add your api keys to .env.
+* Type npm start to start the server.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installing Dependencies
+* Type npm install in your terminal to install all dependencies.
 
-### `npm test`
+## Features
+* Find US National parks by searching your US state letters.
+* Find out more information about each US National Park.
+* Plan a trip to National and add food and entertainment options to your itinerary.
+* Save your planned trip to a list of planned trips.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to use
+### Once your have your applications server running, follow these steps.
+* On the home page, type the US state letters that you would like to search for National Parks in.
+* Click the "Details" button if you would like to find more information on a specific park.
+* To plan a trip to a park, simply go to the map portion of the park details page to find either a food or entertainment option near your park.
+* Next use the "Add Plans" portion of the park details page to add the details of your activity, then click the save button.
+* once you've selected all of your plans for your selected park, click the "Save Trip" button.
+* Now you can view your trip plans on the Plans page in the websites navigation menu.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgements
+* National Parks <a href="https://www.nps.gov/subjects/developer/api-documentation.htm" title="jokes">National Parks api</a>
+* Google maps <a href="https://developers.google.com/maps" title="jokes">Google maps API</a>
