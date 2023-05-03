@@ -1,16 +1,15 @@
+import "./RectangleButton.css"
 
-
-import './RectangleButton.css'
-
-
-type button={
-    name:string;
-    clickHandler: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>)=> void,
+type button = {
+  name: string
+  clickHandler: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
-const Rectanglebutton = ({name, clickHandler}:button) => {
+const Rectanglebutton = ({ name, clickHandler }: button) => {
   return (
-    <button className="Rectanglebutton" onClick={clickHandler} >{name}</button>
+    <button className="Rectanglebutton" onClick={clickHandler}>
+      {name}
+    </button>
   )
 }
 

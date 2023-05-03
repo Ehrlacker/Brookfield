@@ -1,13 +1,9 @@
 .ParkActivitiesContainer {
-  background: url('assets/vintage-concrete.webp') no-repeat center center fixed; 
+  background: url("assets/vintage-concrete.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  /* background-color: #ecdbba; */
-  /* max-width: 1330px; */
-  /* width: 100%; */
   max-width: 1130px;
   width: 100%;
   height: 100%;
@@ -25,7 +21,6 @@
   text-align: left;
   font-size: 1.75rem;
   margin-left: 1rem;
-  margin-top: -2rem;
 }
 
 .ParkActivitiesButton {
@@ -33,7 +28,7 @@
   background-color: #c84b31;
   color: white;
   border-radius: 2rem;
-  padding: .75rem;
+  padding: 0.75rem;
   font-size: 1.25rem;
   font-weight: bold;
   margin: 2rem 1rem 2rem 1rem;
@@ -41,7 +36,6 @@
 
 .ParkActivitiesButton:hover {
   cursor: pointer;
-
   background-color: #a7422e;
 }
 
@@ -49,7 +43,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* width: 100%; */
   max-width: 1330px;
   height: auto;
 }

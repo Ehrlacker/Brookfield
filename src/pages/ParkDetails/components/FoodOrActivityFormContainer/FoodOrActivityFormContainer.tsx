@@ -1,10 +1,10 @@
-import { useState, ChangeEvent, MouseEvent, useContext } from "react"
+import { useState, ChangeEvent, useContext } from "react"
 import FoodOrActivityForm from "pages/ParkDetails/components/FoodOrActivityForm/FoodOrActivityForm"
 import "./FoodOrActivityFormContainer.css"
 import FoodOrActivityExplanation from "pages/ParkDetails/components/FoodOrActivityExplanation/FoodOrActivityExplanation"
 import RoundedButton from "components/common/RoundedButton/RoundedButton"
 import { TripPlansContext } from "contexts/TripPlansProvider"
-import { v4 as uuidV4 } from 'uuid';
+import { v4 as uuidV4 } from "uuid"
 
 export type inputPropValues = {
   activityType: string
@@ -21,7 +21,7 @@ const FoodOrActivityFormContainer = () => {
     Name: "",
     Address: "",
     cityStateZipcode: "",
-    id: ""
+    id: "",
   })
 
   const handleRegister = (e: ChangeEvent<HTMLInputElement>) => {
@@ -36,7 +36,10 @@ const FoodOrActivityFormContainer = () => {
 
     if (inputValues.activityType.length === 0) {
       return
-    } else if (inputValues.activityType !== "food"  && inputValues.activityType !== "activity") {
+    } else if (
+      inputValues.activityType !== "food" &&
+      inputValues.activityType !== "activity"
+    ) {
       return
     } else if (inputValues.Name.length === 0) {
       return
@@ -45,19 +48,17 @@ const FoodOrActivityFormContainer = () => {
     } else if (inputValues.cityStateZipcode.length === 0) {
       return
     } else {
-      inputValues.id=uuidV4()
+      inputValues.id = uuidV4()
       const newActivityList = [...activities, inputValues]
       setActivities(newActivityList)
-
 
       setInputValues({
         activityType: "",
         Name: "",
         Address: "",
         cityStateZipcode: "",
-        id: ""
+        id: "",
       })
-      console.log(activities)
     }
   }
 
@@ -99,9 +100,10 @@ const FoodOrActivityFormContainer = () => {
             onChange={handleRegister}
           />
           <RoundedButton
-           text="save" 
-           clickHandler={submitActivity} 
-           style={{  "maxWidth": "13rem", "width": "100%", "marginTop": "1rem"}} />
+            text="save"
+            clickHandler={submitActivity}
+            style={{ maxWidth: "13rem", width: "100%", marginTop: "1rem" }}
+          />
         </form>
         <FoodOrActivityExplanation />
       </div>

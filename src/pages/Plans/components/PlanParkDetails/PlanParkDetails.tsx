@@ -15,17 +15,16 @@ type trip = {
 const PlanParkDetails = ({ array }: array) => {
   return (
     <div className="PlanParkDetails">
-     
-      {array.park.map(() => {
+      {array.park.map((plan) => {
         return (
-          <div className="PlanParkDetailsImageWrapper">
+          <div className="PlanParkDetailsImageWrapper" key={array.park[0].id}>
             <div>
               <h1 className="PlanParkDetailsH1">{array.park[0].fullName}</h1>
               <div className="PlansParkDetailContainer">
                 <div className="ParkDetailWrapper">
                   <h3 className="PlanParkDetailName">City</h3>
                   <p className="PlanParkDetail">
-                   {array.park[0].addresses[0].city}
+                    {array.park[0].addresses[0].city}
                   </p>
                 </div>
                 <div className="ParkDetailWrapper">

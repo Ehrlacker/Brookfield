@@ -49,21 +49,17 @@
 }
 
 @media (max-width: 768px) {
-
-
-  .SearchBar{
+  .SearchBar {
     width: 400px;
   }
 
-  .searchInput{
+  .searchInput {
     font-size: 1.25rem;
   }
 
   .SearchButton {
     font-size: 1.25rem;
   }
-
-
 }
 
 @media (max-width: 480px) {

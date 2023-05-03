@@ -12,7 +12,6 @@ const Navbar = () => {
         <Hamburger color="#C84B31" toggled={isOpen} toggle={setOpen} />
         <NavItem page="/Parks" title="Parks" />
         <NavItem page="/plans" title="Plans" />
-        <NavItem page="/signin" title="sign in" />
       </div>
     )
   }

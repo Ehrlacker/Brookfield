@@ -35,15 +35,9 @@
 }
 
 @media (max-width: 768px) {
-    .PlanParkDetailsImageWrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-  .PlanParkDetailName {
-    font-size: 0.75rem;
-  }
-  .PlanParkDetail {
-    font-size: 0.75rem;
+  .PlanParkDetailsImageWrapper {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .planParkDetailsImage {
     max-height: 500px;
@@ -58,13 +52,6 @@
 }
 
 @media (max-width: 480px) {
-  .PlanParkDetailName {
-    font-size: 0.75rem;
-  }
-  .PlanParkDetail {
-    font-size: 0.75rem;
-  }
-
   .planParkDetailsImage {
     max-height: 150px;
     height: 100%;
@@ -77,6 +64,5 @@
     background-size: cover;
     background-position: center center;
     object-fit: cover;
-  
   }
 }

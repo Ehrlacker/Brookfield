@@ -15,12 +15,7 @@
 }
 
 .Parkimage:hover {
-  cursor: pointer;
-}
-
-.Parkimage:hover {
   transform: scale(1.05);
-  /* cursor: pointer; */
 }
 
 .ParkNameButtonContainer {
@@ -35,18 +30,6 @@
   margin-top: 0.25rem;
 }
 
-/* .ParkButton {
-  all: unset;
-
-  color: #c84b31;
- 
-  width: 2rem;
-  position: relative;
-  bottom: 10%;
-  left: 80%;
-  border-radius: 0.5rem;
-} */
-
 .ParkLocation {
   color: rgb(69, 68, 68);
   margin-top: 0.5rem;
@@ -56,8 +39,8 @@
   text-decoration: underline;
 }
 
-.ParkButtonDiv{
-  display:flex;
+.ParkButtonDiv {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -65,7 +48,6 @@
   .Park {
     min-width: 250px;
     max-width: 250px;
-
   }
   .Parkimage {
     height: 250px;
@@ -76,7 +58,6 @@
   .Park {
     min-width: 150px;
     max-width: 150px;
- 
   }
 
   .Parkimage {

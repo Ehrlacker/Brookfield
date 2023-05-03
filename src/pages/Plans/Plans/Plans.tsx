@@ -15,7 +15,6 @@ type trip = {
 
 const Plans = () => {
   const { trip, setTrip } = useContext(TripContext)
-  console.log(trip)
 
   const deleteTripPlan = (plan: trip) => {
     const newTrips = trip.filter((triplist) => {
@@ -29,7 +28,7 @@ const Plans = () => {
         <h1 className="PlansTitle">Plans:</h1>
         {trip.map((plan) => {
           return (
-            <div className="PlansDetailsActivitiesWrapper">
+            <div className="PlansDetailsActivitiesWrapper" key={plan.id}>
               <PlanParkDetails array={plan} key={plan.park[0].id} />
               <PlanParkActivities
                 key={uuidV4()}

@@ -1,18 +1,11 @@
+import "./ParkTitle.css"
 
-
-import './ParkTitle.css'
-
-type title={
-    name:string;
+type title = {
+  name: string
 }
 
-
-const ParkTitle = ({name}:title) => {
-  return (
-    <div className="ParkTitle">{name}</div>
-  )
+const ParkTitle = ({ name }: title) => {
+  return <div className="ParkTitle">{name}</div>
 }
 
 export default ParkTitle
-
-

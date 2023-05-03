@@ -1,23 +1,16 @@
-
-
-.NavbarHidden{
-    position: absolute;
-    right: 0;
-    top:10px;
-    background-color: #f2f2f2;
-    max-width: 13rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
-
+.NavbarHidden {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background-color: #f2f2f2;
+  max-width: 13rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-
-.Navbar{
-    
-    display: flex;
-    align-items: center;
-
+.Navbar {
+  display: flex;
+  align-items: center;
 }

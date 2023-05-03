@@ -1,52 +1,45 @@
-
-
-.ParkLocations{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-wrap: wrap;
-    margin-left: 1rem;
+.ParkLocations {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 1rem;
 }
 
-.ParkLocationsDescriptionWrapper{
+.ParkLocationsDescriptionWrapper {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   margin: 1rem 2rem 1rem 0;
   text-align: center;
 }
 
-.ParkLocationsTitle{
-    font-weight: bold;
-    text-align: left;   
+.ParkLocationsTitle {
+  font-weight: bold;
+  text-align: left;
 }
 
-.ParkLocationsDescription{
-    text-align: left; 
-    
+.ParkLocationsDescription {
+  text-align: left;
 }
 
-@media(max-width:768px){
-    .ParkLocationsDescription{
-      font-size: .75rem;
-    }
-    .ParkLocationsTitle{
-        font-size: .75rem;
-    }
-
-
+@media (max-width: 768px) {
+  .ParkLocationsDescription {
+    font-size: 0.75rem;
   }
-  
-  @media(max-width:480px){
-    .ParkLocationsDescription {
-        font-size: .75rem;
-      }
-
-      .ParkLocationsTitle{
-        font-size: .75rem;
-      }
-  
- 
+  .ParkLocationsTitle {
+    font-size: 0.75rem;
   }
+}
+
+@media (max-width: 480px) {
+  .ParkLocationsDescription {
+    font-size: 0.75rem;
+  }
+
+  .ParkLocationsTitle {
+    font-size: 0.75rem;
+  }
+}

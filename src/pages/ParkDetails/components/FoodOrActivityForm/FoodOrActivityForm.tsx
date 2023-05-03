@@ -10,7 +10,6 @@ export type inputProps = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-
 const FoodOrActivityForm = ({
   labelType,
   placeholder,

@@ -7,8 +7,8 @@ import { TrashIcon } from "@heroicons/react/24/solid"
 import "./TripPlansContainer.css"
 
 type array = {
-  array: inputPropValues[];
-  clicked:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+  array: inputPropValues[]
+  clicked: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 export type inputPropValues = {
   activityType: string
@@ -18,11 +18,9 @@ export type inputPropValues = {
   id: string
 }
 
-
 const TripPlansContainer = ({ array, clicked }: array) => {
   const { activities, setActivities } = useContext(TripPlansContext)
 
-  
   const deleteTripPlan = (plan: inputPropValues) => {
     const newActivities = activities.filter((activitylist) => {
       return activitylist.id !== plan.id

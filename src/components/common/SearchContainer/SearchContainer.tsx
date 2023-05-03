@@ -1,4 +1,3 @@
-// import Searchbar from 'components/common/Searchbar/Searchbar'
 import { ReactNode } from "react"
 
 interface SearchBar {

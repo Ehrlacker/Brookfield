@@ -1,4 +1,3 @@
-
 import "./ParkImage.css"
 
 type background = {
@@ -10,8 +9,7 @@ const ParkImage = ({ background }: background) => {
     <div
       className="ParkImage"
       style={{ backgroundImage: `url(${background})` }}
-    >
-    </div>
+    ></div>
   )
 }
 

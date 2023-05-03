@@ -1,10 +1,7 @@
-
-
-.ParkDetailsContainer{
-    margin: 0 1rem 0 1rem;
-    max-width: 1130px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
+.ParkDetailsContainer {
+  margin: 0 1rem 0 1rem;
+  max-width: 1130px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

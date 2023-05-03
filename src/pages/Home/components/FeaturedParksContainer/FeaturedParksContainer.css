@@ -6,13 +6,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* width: 100%; */
   max-width: 1130px;
   height: 100%;
 }
 
 @media (max-width: 1130px) {
-  .ParkListContainer{
+  .ParkListContainer {
     width: 100vw;
   }
 
@@ -26,13 +25,11 @@
     white-space: nowrap;
     flex-wrap: nowrap;
     scroll-behavior: smooth;
-   background-size: contain;
-   -webkit-overflow-scrolling: touch;
-
+    background-size: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .ParkList::-webkit-scrollbar{
+  .ParkList::-webkit-scrollbar {
     display: none;
   }
-
 }

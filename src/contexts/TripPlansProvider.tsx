@@ -1,17 +1,12 @@
-
-
-
 import { useState, createContext } from "react"
-// import { inputPropValues } from "types/types"
 
 export type inputPropValues = {
-    activityType: string
-    Name: string
-    Address: string
-    cityStateZipcode: string
-    id: string
-  }
-
+  activityType: string
+  Name: string
+  Address: string
+  cityStateZipcode: string
+  id: string
+}
 
 type TripPlansContextProviderprops = {
   children: React.ReactNode
@@ -23,7 +18,7 @@ type parkState = {
 }
 
 export const TripPlansContext = createContext<parkState>({
-    activities: [],
+  activities: [],
   setActivities: () => {},
 })
 

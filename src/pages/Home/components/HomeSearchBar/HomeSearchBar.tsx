@@ -1,31 +1,21 @@
-import { ChangeEvent, useState, useEffect, useContext } from "react"
+import { useState, useContext } from "react"
 import { ParkSearchContext } from "contexts/ParkSearchProvider"
-import { useLocation, useNavigate, useSearchParams, useParams } from "react-router-dom"
-import {Datum} from 'types/types'
+import { useNavigate } from "react-router-dom"
+import { Datum } from "types/types"
 import "./HomeSearchBar.css"
-// import useParks from "hooks/UseParks"
-
-type buttonSearch = {
-  clickHandler: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
-  onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void
-}
 
 const HomeSearchBar = () => {
   const { parks, setParks } = useContext(ParkSearchContext)
   const [value, SetValue] = useState("")
-  const [params] = useSearchParams()
-
-  console.log(params.get("state"))
   const navigate = useNavigate()
 
-    const getParks = async () => {
-      const url = `https://developer.nps.gov/api/v1/parks?api_key=${process.env.REACT_APP_apikey}&stateCode=${value}`
-      const response = await fetch(url)
-      const resJSON = await response.json()
-      console.log(resJSON.data)
-      setParks(resJSON.data)  
-    }
+  const getParks = async () => {
+    const url = `https://developer.nps.gov/api/v1/parks?api_key=${process.env.REACT_APP_apikey}&stateCode=${value}`
+    const response = await fetch(url)
+    const resJSON = await response.json()
 
+    setParks(resJSON.data)
+  }
 
   const HandleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value
@@ -35,7 +25,6 @@ const HomeSearchBar = () => {
   const SubmitParkValueForSearch = async (
     e: React.MouseEvent<HTMLButtonElement>
   ) => {
-
     e.preventDefault()
     saveToLocalStorage(parks)
     getParks()

@@ -9,7 +9,7 @@ type park = {
   name: string
   location: string
   id: string
-  clickHandler: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+  clickHandler?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
 
 const Park = ({ image, name, location, id, clickHandler }: park) => {
@@ -20,7 +20,7 @@ const Park = ({ image, name, location, id, clickHandler }: park) => {
         onClick={clickHandler}
         className="Parkimage"
         src={image}
-        alt="a picture of a park"
+        alt="a park"
       />
 
       <div className="ParkNameButtonContainer">

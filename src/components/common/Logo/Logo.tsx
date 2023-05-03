@@ -1,6 +1,6 @@
 
 import BrookfieldLogo from 'assets/Untitled design (26).png'
-import {Link, useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import './Logo.css'
 
 const Logo = () => {
@@ -14,6 +14,3 @@ const Logo = () => {
 }
 
 export default Logo
-
-
-// navigate(`/`)

@@ -1,23 +1,16 @@
-
-
-.ParkDescriptionActivitiesName{
-    text-decoration: underline;
-    margin: 1rem;
+.ParkDescriptionActivitiesName {
+  text-decoration: underline;
+  margin: 1rem;
 }
 
-
-@media(max-width:768px){
-    .ParkDescriptionActivitiesName {
-      font-size: .75rem;
-    }
-
+@media (max-width: 768px) {
+  .ParkDescriptionActivitiesName {
+    font-size: 0.75rem;
   }
-  
-  @media(max-width:480px){
-    .ParkDescriptionActivitiesName{
-      font-size: .75rem;
-    }
-  
- 
-  }
+}
 
+@media (max-width: 480px) {
+  .ParkDescriptionActivitiesName {
+    font-size: 0.75rem;
+  }
+}

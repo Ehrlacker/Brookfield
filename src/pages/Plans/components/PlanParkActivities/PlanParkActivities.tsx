@@ -1,12 +1,11 @@
 import { Datum } from "types/types"
 import { inputPropValues } from "types/types"
-import RoundedButton from 'components/common/RoundedButton/RoundedButton'
+import RoundedButton from "components/common/RoundedButton/RoundedButton"
 import "./PlanParkActivities.css"
 
 type array = {
   array: trip
-  clicked:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
-  // id: string;
+  clicked: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 type trip = {
@@ -25,7 +24,7 @@ const PlanParkActivities = ({ array, clicked }: array) => {
           {array.activities.map((activity: inputPropValues) => {
             if (activity.activityType === "activity") {
               return (
-                <div className="TripPlans">
+                <div className="TripPlans" key={activity.id}>
                   <p>Type: {activity.activityType}</p>
                   <p>Name: {activity.Name}</p>
                   <p>Address: {activity.Address}</p>
@@ -41,7 +40,7 @@ const PlanParkActivities = ({ array, clicked }: array) => {
           {array.activities.map((activity: inputPropValues) => {
             if (activity.activityType === "food") {
               return (
-                <div className="TripPlans" >
+                <div className="TripPlans" key={activity.id}>
                   <p>Type: {activity.activityType}</p>
                   <p>Name: {activity.Name}</p>
                   <p>Address: {activity.Address}</p>

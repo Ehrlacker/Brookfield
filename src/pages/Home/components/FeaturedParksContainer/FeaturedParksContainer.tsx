@@ -27,9 +27,7 @@ const FeaturedParksContainer = () => {
               image={park.images[0].url}
               name={park.fullName}
               location={park.states}
-              clickHandler={() => {
-                console.log("clicked")
-              }}
+              clickHandler={() => {}}
             />
           )
         })}
