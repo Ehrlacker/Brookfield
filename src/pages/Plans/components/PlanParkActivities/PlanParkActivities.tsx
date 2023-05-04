@@ -22,7 +22,7 @@ const PlanParkActivities = ({ array, clicked }: array) => {
         <div className="TripPlansParkActivitiesBox">
           <h2 className="TripPlansFoodActivity">Food</h2>
           {array.activities.map((activity: inputPropValues) => {
-            if (activity.activityType === "activity") {
+            if (activity.activityType === "food") {
               return (
                 <div className="TripPlans" key={activity.id}>
                   <p>Type: {activity.activityType}</p>
@@ -38,7 +38,7 @@ const PlanParkActivities = ({ array, clicked }: array) => {
         <div className="TripPlansParkActivitiesBox">
           <h2 className="TripPlansFoodActivity">Activity</h2>
           {array.activities.map((activity: inputPropValues) => {
-            if (activity.activityType === "food") {
+            if (activity.activityType === "activity") {
               return (
                 <div className="TripPlans" key={activity.id}>
                   <p>Type: {activity.activityType}</p>
