@@ -47,8 +47,9 @@
     { name: "Texas", value: "TX" },
     { name: "Utah", value: "UT" },
     { name: "Vermont", value: "VT" },
+    { name: "Virginia", value: "VA" },
     { name: "Washington", value: "WA" },
-    { name: "West Virginnia", value: "WV" },
+    { name: "West Virginia", value: "WV" },
     { name: "Wisconson", value: "WI" },
     { name: "Wyoming", value: "WY" },
   ]
