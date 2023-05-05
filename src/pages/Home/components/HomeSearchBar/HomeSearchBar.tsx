@@ -1,12 +1,13 @@
 import { useState, useContext } from "react"
 import { ParkSearchContext } from "contexts/ParkSearchProvider"
+import Dropdown from "components/common/DropDown/DropDown"
 import { useNavigate } from "react-router-dom"
 import { Datum } from "types/types"
 import "./HomeSearchBar.css"
 
 const HomeSearchBar = () => {
   const { parks, setParks } = useContext(ParkSearchContext)
-  const [value, SetValue] = useState("")
+  const [value, setValue] = useState("Select state")
   const navigate = useNavigate()
 
   const getParks = async () => {
@@ -19,7 +20,7 @@ const HomeSearchBar = () => {
 
   const HandleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value
-    SetValue(newValue)
+    setValue(newValue)
   }
 
   const SubmitParkValueForSearch = async (
@@ -27,8 +28,12 @@ const HomeSearchBar = () => {
   ) => {
     e.preventDefault()
     saveToLocalStorage(parks)
-    getParks()
-    navigate(`/Parks?state=${value}`)
+    if (value === "Select state") {
+      return
+    } else {
+      getParks()
+      navigate(`/Parks?state=${value}`)
+    }
   }
 
   const saveToLocalStorage = (items: Datum[]) => {
@@ -36,22 +41,11 @@ const HomeSearchBar = () => {
   }
 
   return (
-    <form className="SearchBar">
-      <input
-        className="searchInput"
-        value={value}
-        onChange={HandleInputChange}
-        type="string"
-        placeholder="Search By State Letters"
-      />
-      <button
-        className="SearchButton"
-        onClick={SubmitParkValueForSearch}
-        type="submit"
-      >
-        search
-      </button>
-    </form>
+    <Dropdown
+      onChange={HandleInputChange}
+      onClick={SubmitParkValueForSearch}
+      value={value}
+    />
   )
 }
 

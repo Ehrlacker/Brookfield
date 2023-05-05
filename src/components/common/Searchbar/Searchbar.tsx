@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import { ParkSearchContext } from "contexts/ParkSearchProvider"
+import Dropdown from "components/common/DropDown/DropDown"
 import { useNavigate } from "react-router-dom"
 import "./Searchbar.css"
 
@@ -36,23 +37,8 @@ const Searchbar = () => {
   }
 
   return (
-    <form className="SearchBar">
-      <input
-        className="searchInput"
-        value={value}
-        onChange={HandleInputChange}
-        type="string"
-        placeholder="Search By State Letters"
-      />
 
-      <button
-        className="SearchButton"
-        onClick={SubmitParkValueForSearch}
-        type="submit"
-      >
-        search
-      </button>
-    </form>
+    <Dropdown onChange={HandleInputChange} onClick={SubmitParkValueForSearch} value={value} />
   )
 }
 
