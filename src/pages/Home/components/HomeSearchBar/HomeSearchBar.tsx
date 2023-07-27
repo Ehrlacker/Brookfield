@@ -14,7 +14,6 @@ const HomeSearchBar = () => {
     const url = `https://developer.nps.gov/api/v1/parks?api_key=${process.env.REACT_APP_apikey}&stateCode=${value}`
     const response = await fetch(url)
     const resJSON = await response.json()
-
     setParks(resJSON.data)
   }
 

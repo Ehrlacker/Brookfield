@@ -4,7 +4,7 @@
     { name: "Select State", value: "Select State" },
     { name: "Alabama", value: "AL" },
     { name: "Alaska", value: "AK" },
-    { name: "Arizona", value: "AR" },
+    { name: "Arizona", value: "AZ" },
     { name: "Arkansas", value: "AR" },
     { name: "California", value: "CA" },
     { name: "Colorado", value: "CO" },

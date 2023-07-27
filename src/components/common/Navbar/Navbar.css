@@ -8,9 +8,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+ 
 }
 
 .Navbar {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
+}
+
+.Hamburger{
+  margin-right: 1rem;
 }

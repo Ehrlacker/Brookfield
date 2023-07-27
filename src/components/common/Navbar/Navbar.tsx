@@ -9,7 +9,9 @@ const Navbar = () => {
   if (isOpen) {
     return (
       <div className="NavbarHidden">
+        <div className="Hamburger">
         <Hamburger color="#C84B31" toggled={isOpen} toggle={setOpen} />
+        </div>
         <NavItem page="/Parks" title="Parks" />
         <NavItem page="/plans" title="Plans" />
       </div>
